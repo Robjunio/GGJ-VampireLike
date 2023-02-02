@@ -11,7 +11,7 @@ namespace Player
         [SerializeField] private float speed = 3f;
         [HideInInspector] public float lastHorizontalValue;
         [HideInInspector] public Vector2 direction;
-        
+
         private Rigidbody2D _rb;
         
         private void Awake()

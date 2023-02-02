@@ -5,11 +5,12 @@ namespace Enemies
 {
     public class EnemyMovement : MonoBehaviour
     {
+        private EnemyStats _enemy;
         private Transform _player;
-        public EnemyScriptableObject enemyData;
 
         private void Start()
         {
+            _enemy = GetComponent<EnemyStats>();
             _player = FindObjectOfType<PlayerMovement>().transform;
         }
 
@@ -18,7 +19,7 @@ namespace Enemies
             transform.position = Vector2.MoveTowards(
                 transform.position, 
                 _player.transform.position, 
-                enemyData.Speed * Time.deltaTime);
+                _enemy.currentSpeed * Time.deltaTime);
         }
     }
 }

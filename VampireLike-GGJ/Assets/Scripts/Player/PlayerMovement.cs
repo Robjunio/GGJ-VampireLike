@@ -5,14 +5,15 @@ namespace Player
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerMovement : MonoBehaviour
     {
-        [SerializeField] private float speed;
         [HideInInspector] public float lastHorizontalValue;
         [HideInInspector] public Vector2 direction;
 
+        private PlayerStats _player;
         private Rigidbody2D _rb;
-        
+
         private void Awake()
         {
+            _player = GetComponent<PlayerStats>();
             _rb = GetComponent<Rigidbody2D>();
         }
 
@@ -41,7 +42,7 @@ namespace Player
 
         public void Move()
         {
-            _rb.velocity = new Vector2(direction.x * speed, direction.y * speed);
+            _rb.velocity = new Vector2(direction.x * _player.currentSpeed, direction.y * _player.currentSpeed);
         }
     }
 }

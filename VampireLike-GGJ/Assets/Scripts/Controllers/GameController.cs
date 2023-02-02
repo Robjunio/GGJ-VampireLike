@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -8,6 +5,8 @@ public class GameController : MonoBehaviour
     public static GameController Instance; 
     
     private XpController _xpController;
+
+    public GameInterface Interface;
 
     private void Awake()
     {
@@ -17,6 +16,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         _xpController = new XpController();
+        _xpController.Start();
     }
     
     // The exp orb will get acess to the controller by this function

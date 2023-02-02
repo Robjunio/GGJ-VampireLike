@@ -8,7 +8,7 @@ namespace Player
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerMovement : MonoBehaviour
     {
-        [SerializeField] private float speed = 3f;
+        [SerializeField] private float speed;
         [HideInInspector] public float lastHorizontalValue;
         [HideInInspector] public Vector2 direction;
 

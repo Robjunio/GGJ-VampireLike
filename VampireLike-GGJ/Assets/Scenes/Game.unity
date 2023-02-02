@@ -766,12 +766,12 @@ GameObject:
   - component: {fileID: 888683359}
   - component: {fileID: 888683358}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: LevelUpPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &888683357
 RectTransform:
   m_ObjectHideFlags: 0
@@ -864,6 +864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f91dd08388821d449a74ea5b301fd4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelUpPanel: {fileID: 888683356}
   _xpSlider: {fileID: 1155737640}
   _levelInfo: {fileID: 1221881244}
 --- !u!114 &959167556

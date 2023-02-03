@@ -11,7 +11,7 @@ public class XpOrb : MonoBehaviour
     private void Start()
     {
         TryGetComponent(out _rigidbody2D);
-        _rigidbody2D.AddForce(new Vector2(Random.Range(-3,3), 1.5f), ForceMode2D.Impulse);
+        _rigidbody2D.AddForce(new Vector2(Random.Range(-2,2), Random.Range(-2,2)), ForceMode2D.Impulse);
         _animCoroutine = StartCoroutine(xpDropEffect());
     }
 

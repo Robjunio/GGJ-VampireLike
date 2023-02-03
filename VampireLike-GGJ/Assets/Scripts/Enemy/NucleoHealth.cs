@@ -12,7 +12,7 @@ public class NucleoHealth : MonoBehaviour
 
         if (_currentHP <= 0)
         {
-            GameController.Instance.GetXpDrop().CreateXpOrbs((_maxHP/10000) * 10 , transform);
+            GameController.Instance.GetXpDrop().CreateXpOrbs((_maxHP/10000) * 6 , transform);
             gameObject.GetComponent<Animator>().Play("enemy_death");
             GameController.Instance.GetNucleoController().NucleoDestroy();
             Destroy(gameObject, 1f);

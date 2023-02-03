@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
 
 // O GameController deve ter uma instancia dessa classe para que ela possa ser chamada por outros scripts
 public class XpController

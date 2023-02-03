@@ -766,10 +766,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Melee
       objectReference: {fileID: 0}
-    - target: {fileID: 7319544555399935358, guid: 3a5aa4e70989d9949b8c1f5cfc939013, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a5aa4e70989d9949b8c1f5cfc939013, type: 3}
 --- !u!4 &1842239124 stripped
@@ -1004,9 +1000,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameInterface
       objectReference: {fileID: 0}
+    - target: {fileID: 5889935592574062239, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: VictoryPanel
+      value: 
+      objectReference: {fileID: 5889935592692986589}
     - target: {fileID: 5889935593444714990, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+--- !u!1 &5889935592692986589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5889935593923026440, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+  m_PrefabInstance: {fileID: 5889935592692986588}
+  m_PrefabAsset: {fileID: 0}

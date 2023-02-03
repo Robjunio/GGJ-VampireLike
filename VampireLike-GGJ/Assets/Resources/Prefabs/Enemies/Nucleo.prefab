@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5140925624310500929}
   m_Layer: 0
   m_Name: Nucleo
-  m_TagString: Enemy
+  m_TagString: Nodule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

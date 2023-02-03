@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768d3f2dc0390ba4094a4e8b8b76d9e6, type: 3}
   m_Name: Melee
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 30
   maxHealth: 50
   speed: 1.5

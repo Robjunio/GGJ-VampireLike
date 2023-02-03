@@ -1,3 +1,4 @@
+using Player;
 using UnityEngine;
 
 namespace Enemies
@@ -29,6 +30,15 @@ namespace Enemies
         private void Kill()
         {
             Destroy(gameObject);
+        }
+
+        private void OnCollisionStay2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                PlayerStats player = collision.gameObject.GetComponent<PlayerStats>();
+                player.TakeDamage(currentDamage);
+            }
         }
     }
 }

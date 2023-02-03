@@ -4,18 +4,18 @@ namespace UI
 {
     public class HPBar : MonoBehaviour
     {
-        [SerializeField] private Transform _hpBar;
+        [SerializeField] private Transform hpBar;
 
-        public void UpdateBar(int current, int max)
+        public void UpdateBar(float current, float max)
         {
-            float percentage = (float) current / max;
+            float percentage = current / max;
 
             if (percentage < 0f)
             {
                 percentage = 0f;
             }
 
-            _hpBar.transform.localScale = new Vector3(percentage, 1f, 1f);
+            hpBar.transform.localScale = new Vector3(percentage, 1f, 1f);
         }
     }
 

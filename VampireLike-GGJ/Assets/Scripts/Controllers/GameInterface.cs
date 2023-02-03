@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class GameInterface : MonoBehaviour
 {
+    [SerializeField] private GameObject VictoryPanel;
     [SerializeField] private GameObject LevelUpPanel;
     
     [SerializeField] private Slider _xpSlider;
@@ -19,5 +20,11 @@ public class GameInterface : MonoBehaviour
     public void ActivateLevelUpPanel()
     {
         LevelUpPanel.SetActive(true);
+    }
+
+    public void ActivateVictoryPanel()
+    {
+        Time.timeScale = 0;
+        VictoryPanel.SetActive(true);
     }
 }

@@ -1,3 +1,4 @@
+using Player;
 using UnityEngine;
 
 namespace Enemies
@@ -19,6 +20,8 @@ namespace Enemies
         public void TakeDamage(float damage)
         {
             currentHealth -= damage;
+            
+            Debug.Log(currentHealth);
 
             if (currentHealth <= 0)
             {
@@ -29,6 +32,15 @@ namespace Enemies
         private void Kill()
         {
             Destroy(gameObject);
+        }
+
+        private void OnCollisionStay2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                PlayerStats player = collision.gameObject.GetComponent<PlayerStats>();
+                player.TakeDamage(currentDamage);
+            }
         }
     }
 }

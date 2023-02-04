@@ -1,23 +1,23 @@
 using UnityEngine;
 
-namespace Player
+namespace Enemies
 {
-    public class PlayerAnimator : MonoBehaviour
+    public class TankAnimator : MonoBehaviour
     {
         private Animator _animator;
-        private PlayerMovement _playerMovement;
+        private EnemyMovement _enemyMovement;
         private SpriteRenderer _spriteRenderer;
 
         private void Awake()
         {
-            _animator = GetComponentInChildren<Animator>();
-            _playerMovement = GetComponent<PlayerMovement>();
-            _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            _animator = GetComponent<Animator>();
+            _enemyMovement = GetComponent<EnemyMovement>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         private void Update()
         {
-            if (_playerMovement.direction.x != 0 || _playerMovement.direction.y != 0)
+            if (_enemyMovement.direction.x != 0 || _enemyMovement.direction.y != 0)
             {
                 _animator.SetBool("Move", true);
                 CheckSpriteDirection();
@@ -31,7 +31,7 @@ namespace Player
 
         private void CheckSpriteDirection()
         {
-            _spriteRenderer.flipX = _playerMovement.lastHorizontalValue < 0;
+            _spriteRenderer.flipX = _enemyMovement.Rigidbody.velocity.x < 0;
         }
     }
 }

@@ -23,9 +23,11 @@ public class GunBullet : MonoBehaviour
         {
             case "Enemy":
                 col.transform.GetComponent<EnemyStats>().TakeDamage(_damage);
+                Destroy(gameObject);
                 break;
             case "Nodule":
                 col.transform.GetComponent<NucleoHealth>().TakeDamage(_damage);
+                Destroy(gameObject);
                 break;
         }
     }
@@ -33,6 +35,6 @@ public class GunBullet : MonoBehaviour
     private IEnumerator DestroyBullet()
     {
         yield return new WaitForSecondsRealtime(3f);
-        Destroy(this);
+        Destroy(gameObject);
     }
 }

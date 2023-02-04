@@ -16,7 +16,7 @@ public class GunController : MonoBehaviour
         _level = 1;
         damage = 30;
         bullets = 1;
-        _attackInterval = 3f;
+        _attackInterval = 4f;
 
         StartCoroutine(AlternatingAttack());
         
@@ -102,11 +102,11 @@ public class GunController : MonoBehaviour
         Vector2 shootDirection = (closestEnemy.position - transform.position).normalized;
         
         
-        StartCoroutine(Shoot(shootDirection, barrelSize));
+        StartCoroutine(Shoot(shootDirection, barrelSize, closestEnemy));
 
     }
 
-    private IEnumerator Shoot(Vector2 direction, int barrelSize)
+    private IEnumerator Shoot(Vector2 direction, int barrelSize, Transform closestEnemy)
     {
         var i = 0;
 
@@ -114,12 +114,14 @@ public class GunController : MonoBehaviour
         {
             var bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             var rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(direction * 2, ForceMode2D.Impulse);
-            i++;
 
-            yield return new WaitForSecondsRealtime(_attackInterval);
+            rb.velocity = direction * 2;
+            i++;
+            yield return new WaitForSecondsRealtime(0.5f);
 
         }
+
+        yield return new WaitForSecondsRealtime(_attackInterval);
     }
 
 }

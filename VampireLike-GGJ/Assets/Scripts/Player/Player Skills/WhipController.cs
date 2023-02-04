@@ -54,17 +54,17 @@ public class WhipController : MonoBehaviour
         while (true)
         {
             Attack(_facingRight); 
-            yield return new WaitForSeconds(_attackInterval - (_attackInterval * 0.8f));
+            yield return new WaitForSecondsRealtime(_attackInterval - (_attackInterval * 0.8f));
 
             if (_level >= 2)
             {
                 Attack(!_facingRight);
-                yield return new WaitForSeconds(_attackInterval - (_attackInterval * 0.8f));
+                yield return new WaitForSecondsRealtime(_attackInterval - (_attackInterval * 0.8f));
                 
             } else transform.GetChild(0).gameObject.SetActive(false);
 
             transform.GetChild(1).gameObject.SetActive(false);
-            yield return new WaitForSeconds(_attackInterval);
+            yield return new WaitForSecondsRealtime(_attackInterval);
         }
         // ReSharper disable once IteratorNeverReturns
     }

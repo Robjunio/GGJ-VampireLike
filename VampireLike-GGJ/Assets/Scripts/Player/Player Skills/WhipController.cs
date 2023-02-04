@@ -66,6 +66,7 @@ public class WhipController : MonoBehaviour
             transform.GetChild(1).gameObject.SetActive(false);
             yield return new WaitForSeconds(_attackInterval);
         }
+        // ReSharper disable once IteratorNeverReturns
     }
 
     private void Attack(bool direction)

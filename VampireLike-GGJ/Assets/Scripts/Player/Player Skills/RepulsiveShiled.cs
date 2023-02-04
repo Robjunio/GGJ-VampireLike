@@ -6,25 +6,44 @@ using UnityEngine;
 public class RepulsiveShiled : MonoBehaviour
 {
     
+    private float _pushForce;
     private int _damage;
 
-    public void OnEnable()
+    private void OnEnable()
     {
         _damage = GetComponentInParent<RepulsiveShieldController>().damage;
+        _pushForce = GetComponentInParent<RepulsiveShieldController>().pushForce;
     }
 
-    
-    public void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.transform.tag.Equals("Enemy"))
+        if (col.CompareTag("Enemy"))
         {
-            col.transform.GetComponent<EnemyStats>().TakeDamage(_damage);
+            var enemy = col.GetComponent<EnemyStats>();
+            
+            enemy.TakeDamage(_damage);
+            
             Vector2 pushDirection = (transform.position - col.transform.position).normalized;
-            float distance = Vector2.Distance(col.transform.position, transform.position);
-            col.transform.GetComponent<Rigidbody2D>().AddForce(-(pushDirection * 2f * distance), ForceMode2D.Impulse);
+            Debug.Log("Direction: " + pushDirection + "Push Force: " + _pushForce);
+
+            StartCoroutine(PushEnemy(enemy));
         }
-        else if(col.transform.tag.Equals("Nodule")) col.transform.GetComponent<NucleoHealth>().TakeDamage(_damage);
+        else if (col.CompareTag("Nodule")) col.GetComponent<NucleoHealth>().TakeDamage(_damage);
     }
+
+    private IEnumerator PushEnemy(EnemyStats enemy)
+    {
+
+        var enemySpeed = enemy.currentSpeed;
+        
+        enemy.currentSpeed *= -_pushForce;
+        yield return new WaitForSecondsRealtime(0.1f);
+        enemy.currentSpeed = 0;
+        yield return new WaitForSecondsRealtime(0.5f);
+        enemy.currentSpeed = enemySpeed;
+
+    }
+
 
 
     

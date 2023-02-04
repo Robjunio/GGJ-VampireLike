@@ -8,22 +8,22 @@ namespace Enemies
         [HideInInspector] public Vector2 direction;
         
         private EnemyStats _enemy;
-        private Rigidbody2D _rigidbody;
+        public Rigidbody2D rigidbody;
         private Transform _player;
 
-        public Rigidbody2D Rigidbody => _rigidbody;
+        public Rigidbody2D Rigidbody => rigidbody;
 
         private void Start()
         {
             _enemy = GetComponent<EnemyStats>();
             _player = FindObjectOfType<PlayerMovement>().transform;
-            _rigidbody = GetComponent<Rigidbody2D>();
+            rigidbody = GetComponent<Rigidbody2D>();
         }
 
         private void FixedUpdate()
         {
             direction = (_player.position - transform.position).normalized;
-            _rigidbody.velocity = direction * _enemy.currentSpeed;
+            rigidbody.velocity = direction * _enemy.currentSpeed;
         }
     }
 }

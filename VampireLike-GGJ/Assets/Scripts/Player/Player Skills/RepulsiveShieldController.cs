@@ -6,6 +6,7 @@ using UnityEngine;
 public class RepulsiveShieldController : MonoBehaviour
 {
     public int damage;
+    public float pushForce;
     private float _attackInterval;
     private int _level;
     
@@ -13,6 +14,7 @@ public class RepulsiveShieldController : MonoBehaviour
     {
         _level = 1;
         damage = 20;
+        pushForce = 2f;
         _attackInterval = 5f;
 
         StartCoroutine(Attack());

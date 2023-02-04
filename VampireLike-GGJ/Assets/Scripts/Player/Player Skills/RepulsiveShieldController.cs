@@ -51,9 +51,9 @@ public class RepulsiveShieldController : MonoBehaviour
         {
             
             transform.GetChild(0).gameObject.SetActive(true);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSecondsRealtime(0.75f);
             transform.GetChild(0).gameObject.SetActive(false);
-            yield return new WaitForSeconds(_attackInterval);
+            yield return new WaitForSecondsRealtime(_attackInterval);
         }
         
         // ReSharper disable once IteratorNeverReturns

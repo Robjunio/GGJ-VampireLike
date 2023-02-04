@@ -31,16 +31,16 @@ public class RepulsiveShieldController : MonoBehaviour
         switch (_level)
         {
             case 2:
-                _attackInterval = 3f;
+                _attackInterval = 3f; // decrease shield activation interval
                 break;
             case 3:
-                gameObject.transform.localScale *= 1.5f;
+                gameObject.transform.localScale *= 1.5f; // increase shield range
                 break;
             case 4:
-                _attackInterval = 1f;
+                _attackInterval = 1f; // increase shield activation interval
                 break;
             case 5:
-                damage = 60;
+                damage = 60; // increase shield damage
                 break;
         }
     }

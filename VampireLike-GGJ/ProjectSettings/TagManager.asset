@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Nodule
   - Gun
+  - Lightning
   layers:
   - Default
   - TransparentFX

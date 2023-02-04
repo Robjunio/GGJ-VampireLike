@@ -16,8 +16,15 @@ public class Whip : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D col)
     {
         Debug.Log(col.transform.name);
-        if(col.transform.tag.Equals("Enemy")) col.transform.GetComponent<EnemyStats>().TakeDamage(_damage);
-        else if(col.transform.tag.Equals("Nodule")) col.transform.GetComponent<NucleoHealth>().TakeDamage(_damage);
+        switch (col.transform.tag)
+        {
+            case "Enemy":
+                col.transform.GetComponent<EnemyStats>().TakeDamage(_damage);
+                break;
+            case "Nodule":
+                col.transform.GetComponent<NucleoHealth>().TakeDamage(_damage);
+                break;
+        }
     }
 
 }

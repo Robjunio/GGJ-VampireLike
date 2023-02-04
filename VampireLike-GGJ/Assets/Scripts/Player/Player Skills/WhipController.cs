@@ -1,8 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 using System.Collections;
 using Enemies;
 using Unity.VisualScripting;
@@ -23,6 +18,9 @@ public class WhipController : MonoBehaviour
         _attackInterval = 3f;
 
         StartCoroutine(AlternatingAttack());
+        
+        // LevelUp(); // test level 2
+        // LevelUp(); // test level 3
     }
 
     private void Update()
@@ -56,7 +54,7 @@ public class WhipController : MonoBehaviour
         while (true)
         {
             Attack(_facingRight); 
-            yield return new WaitForSeconds(_attackInterval - (_attackInterval*0.8f));
+            yield return new WaitForSeconds(_attackInterval - (_attackInterval * 0.8f));
 
             if (_level >= 2)
             {

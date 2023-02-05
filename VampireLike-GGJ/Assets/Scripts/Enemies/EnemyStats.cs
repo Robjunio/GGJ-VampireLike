@@ -25,6 +25,7 @@ namespace Enemies
 
         public void TakeDamage(float damage)
         {
+            enemyAnimator.Play("EnemyHit");
             currentHealth -= damage;
 
             if (currentHealth <= 0)

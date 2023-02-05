@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class GameInterface : MonoBehaviour
 {
     [SerializeField] private GameObject VictoryPanel;
+    [SerializeField] private GameObject DefeatPanel;
     [SerializeField] private GameObject LevelUpPanel;
     
     [SerializeField] private Slider _xpSlider;
@@ -26,5 +27,11 @@ public class GameInterface : MonoBehaviour
     {
         Time.timeScale = 0;
         VictoryPanel.SetActive(true);
+    }
+
+    public void ActivateDefeatPanel()
+    {
+        Time.timeScale = 0;
+        DefeatPanel.SetActive(true);
     }
 }

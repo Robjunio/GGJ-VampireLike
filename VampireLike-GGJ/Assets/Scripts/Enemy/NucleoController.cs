@@ -6,7 +6,7 @@ public class NucleoController
     private int _numberOfNucleosToWin = 4;
     private int _numberOfNucleosKilled;
 
-    private int _nucleoBaseLife = 500;
+    private int _nucleoBaseLife = 200;
     
     private List<Vector3> listPos = new List<Vector3>()
     {

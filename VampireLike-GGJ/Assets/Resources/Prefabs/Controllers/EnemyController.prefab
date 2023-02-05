@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2365054991758086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2365054991758088}
+  - component: {fileID: 2365054991758089}
+  - component: {fileID: 2365054991758091}
+  m_Layer: 0
+  m_Name: EnemyController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2365054991758088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365054991758086}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2365054991758089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365054991758086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a0f1652a5120947b4a9cd10884b84d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemy1Prefab: {fileID: 7319544555399935358, guid: 3a5aa4e70989d9949b8c1f5cfc939013, type: 3}
+  _enemy2Prefab: {fileID: 6231610707589337721, guid: f5fc0cb4ef2274d4dbc17bd0a0ec3139, type: 3}
+  _enemy3Prefab: {fileID: 0}
+  MaxX: 25
+  MinX: -25
+  MaxY: 21
+  MinY: -16
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  EnemyQnt: 5
+--- !u!114 &2365054991758091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365054991758086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38278d8e69e547cfbf37822d204894d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nucleoPrefab: {fileID: 1999567089974381056, guid: 96878b9dad7978741b75e0c3401c73ff, type: 3}

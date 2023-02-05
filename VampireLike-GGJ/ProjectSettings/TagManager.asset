@@ -7,12 +7,13 @@ TagManager:
   - Enemy
   - Nodule
   - Gun
+  - Wall
   - Lightning
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - UI
@@ -44,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Persona
+    uniqueID: 791162185
     locked: 0

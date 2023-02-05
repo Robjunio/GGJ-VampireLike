@@ -24,7 +24,7 @@ public class RepulsiveShiled : MonoBehaviour
             enemy.TakeDamage(_damage);
             
             Vector2 pushDirection = (transform.position - col.transform.position).normalized;
-            Debug.Log("Direction: " + pushDirection + "Push Force: " + _pushForce);
+            //Debug.Log("Direction: " + pushDirection + "Push Force: " + _pushForce);
 
             StartCoroutine(PushEnemy(enemy));
         }

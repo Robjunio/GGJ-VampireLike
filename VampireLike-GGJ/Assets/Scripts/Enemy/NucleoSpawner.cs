@@ -9,6 +9,6 @@ public class NucleoSpawner : MonoBehaviour
     public void CreateNucleo(Vector3 pos)
     {
         var nucleo = Instantiate(nucleoPrefab, pos, Quaternion.identity);
-        nucleo.GetComponent<NucleoHealth>().SetLife(GameController.Instance.GetNucleoController().GetNucleoLife());
+        nucleo.GetComponent<NucleoHealth>().SetLife(GameController.Instance.GetEnemySpawn().GetNucleoController().GetNucleoLife());
     }
 }

@@ -6,15 +6,23 @@ public class NucleoHealth : MonoBehaviour
     private int _currentHP;
     private int _maxHP;
 
+
+    private BoxCollider2D _boxCollider2D;
+    private void Start()
+    {
+        TryGetComponent(out _boxCollider2D);
+    }
+
     public void TakeDamage(int damage)
     {
         _currentHP -= damage;
 
         if (_currentHP <= 0)
         {
-            GameController.Instance.GetXpDrop().CreateXpOrbs((_maxHP/10000) * 6 , transform);
+            _boxCollider2D.enabled = false;
+            GameController.Instance.GetXpDrop().CreateXpOrbs((_maxHP/500) * 6 , transform);
             gameObject.GetComponent<Animator>().Play("enemy_death");
-            GameController.Instance.GetNucleoController().NucleoDestroy();
+            GameController.Instance.GetEnemySpawn().GetNucleoController().NucleoDestroy();
             Destroy(gameObject, 1f);
         }
     }
@@ -25,8 +33,8 @@ public class NucleoHealth : MonoBehaviour
         _currentHP = value;
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
+    private void OnDestroy()
     {
-        TakeDamage(10000);
+        print("Removeu");
     }
 }

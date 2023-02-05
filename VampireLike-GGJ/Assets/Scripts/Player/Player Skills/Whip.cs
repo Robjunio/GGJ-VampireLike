@@ -15,7 +15,7 @@ public class Whip : MonoBehaviour
     
     public void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log(col.transform.name);
+        //Debug.Log(col.transform.name);
         switch (col.transform.tag)
         {
             case "Enemy":

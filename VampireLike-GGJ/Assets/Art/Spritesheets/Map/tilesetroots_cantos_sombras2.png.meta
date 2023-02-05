@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 227950c865f1ac7468c80a5d79ffe8c8
+guid: 78def7c78aa8e7a4e8b6052b0191dbd7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,97 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Melee_0
+      name: tilesetroots_cantos_sombras2_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 97
-        width: 25
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e127a5c067de7e40888aa97c07c0ba3
-      internalID: -627292827
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Melee_1
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 101
-        width: 27
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d0dda6f0d787b14ba81fd83330f4942
-      internalID: 862356835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Melee_2
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 107
-        width: 29
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24c52e731e7af1a47881877bfd288b49
-      internalID: -1962639673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Melee_3
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 106
-        width: 31
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 696d70c85f646104db2ddcad85f3b1f9
-      internalID: -1703955086
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Melee_4
-      rect:
-        serializedVersion: 2
-        x: 7
+        x: 0
         y: 64
-        width: 19
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10108734e48f7554f8f30ba755949359
-      internalID: 748525469
+      spriteID: 4321d2fd17024744088e0f4cded8c4a4
+      internalID: -109074960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_5
+      name: tilesetroots_cantos_sombras2_1
       rect:
         serializedVersion: 2
-        x: 41
-        y: 74
-        width: 17
-        height: 21
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c0161d866b782b4d919d66524dfa233
-      internalID: -1943402603
+      spriteID: 9df24a40c322cf54291a8b365214671b
+      internalID: -51541074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_6
+      name: tilesetroots_cantos_sombras2_2
       rect:
         serializedVersion: 2
-        x: 73
-        y: 75
-        width: 17
-        height: 15
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0268bef633aa567448af86738c60a905
-      internalID: 1859301023
+      spriteID: d4a365a486721e144948dc8a4efaca02
+      internalID: -519122399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_7
+      name: tilesetroots_cantos_sombras2_3
       rect:
         serializedVersion: 2
-        x: 107
-        y: 69
-        width: 15
-        height: 21
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ede2567aa931b0448ee2ac01b66c5ff
-      internalID: -920900683
+      spriteID: c1d97515f3bf83f42b83105f09a48b21
+      internalID: 51657809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_8
+      name: tilesetroots_cantos_sombras2_4
       rect:
         serializedVersion: 2
-        x: 35
-        y: 37
-        width: 27
-        height: 22
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d87000ab01a81a45b7a92bc33279680
-      internalID: -1031724847
+      spriteID: 03ed682cc7544e24ba5126f7759a7832
+      internalID: 448985628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_9
+      name: tilesetroots_cantos_sombras2_5
       rect:
         serializedVersion: 2
-        x: 66
-        y: 45
-        width: 29
-        height: 13
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,62 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13938eae7daeb6840a33acdb032b5880
-      internalID: 967416746
+      spriteID: 7793ce057df67e948b49c50a2789103d
+      internalID: 158786422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_10
+      name: tilesetroots_cantos_sombras2_6
       rect:
         serializedVersion: 2
-        x: 97
-        y: 43
-        width: 31
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd74bf005755fd64fa430e6a69395f29
-      internalID: 1140059867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Melee_11
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 33
-        width: 25
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7dae3854cc45b042a762046895a44fe
-      internalID: 1334667444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Melee_12
-      rect:
-        serializedVersion: 2
-        x: 6
+        x: 0
         y: 0
-        width: 19
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87096427502cb7244934ccf9edb64d1f
-      internalID: -874037289
+      spriteID: e4dbaec69358dc845bc80be03a1d1f40
+      internalID: 890445469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_13
+      name: tilesetroots_cantos_sombras2_7
       rect:
         serializedVersion: 2
-        x: 38
-        y: 10
-        width: 17
-        height: 21
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,20 +278,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff4f147895587894994d0afc92297a63
-      internalID: -1892466986
+      spriteID: 71ff41c4378997b409df9d81fe6230dd
+      internalID: 1516101799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_14
+      name: tilesetroots_cantos_sombras2_8
       rect:
         serializedVersion: 2
-        x: 70
-        y: 11
-        width: 17
-        height: 15
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,29 +299,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8aa430e0f5906ba43b94fa7f76aea831
-      internalID: 592443807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Melee_15
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 5
-        width: 15
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b594792238020184c8315567c5ec48e5
-      internalID: 915694268
+      spriteID: 452c35abbb9b0414986196b4d0ba62f1
+      internalID: -2145886529
       vertices: []
       indices: 
       edges: []
@@ -463,22 +316,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Melee_12: -874037289
-      Melee_8: -1031724847
-      Melee_11: 1334667444
-      Melee_4: 748525469
-      Melee_14: 592443807
-      Melee_5: -1943402603
-      Melee_13: -1892466986
-      Melee_2: -1962639673
-      Melee_1: 862356835
-      Melee_6: 1859301023
-      Melee_0: -627292827
-      Melee_3: -1703955086
-      Melee_9: 967416746
-      Melee_7: -920900683
-      Melee_15: 915694268
-      Melee_10: 1140059867
+      tilesetroots_cantos_sombras2_2: -519122399
+      tilesetroots_cantos_sombras2_0: -109074960
+      tilesetroots_cantos_sombras2_7: 1516101799
+      tilesetroots_cantos_sombras2_3: 51657809
+      tilesetroots_cantos_sombras2_8: -2145886529
+      tilesetroots_cantos_sombras2_4: 448985628
+      tilesetroots_cantos_sombras2_1: -51541074
+      tilesetroots_cantos_sombras2_5: 158786422
+      tilesetroots_cantos_sombras2_6: 890445469
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

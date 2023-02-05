@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class NucleoController
@@ -5,8 +6,15 @@ public class NucleoController
     private int _numberOfNucleosToWin = 4;
     private int _numberOfNucleosKilled;
 
-    private int _nucleoBaseLife = 10000;
-
+    private int _nucleoBaseLife = 500;
+    
+    private List<Vector3> listPos = new List<Vector3>()
+    {
+        new Vector3(-19f,14f,0f),
+        new Vector3(18f,12f,0f),
+        new Vector3(16f,-10f,0f),
+        new Vector3(-20f,-12f,0f)
+    };
     public int GetNucleoLife()
     {
         int nucleoLife = 0;
@@ -22,12 +30,7 @@ public class NucleoController
     public void NucleoDestroy()
     {
         // provisório
-        Vector3[] listPos = new[]
-        {
-            new Vector3(-3, 3, 0),
-            new Vector3(2, -5, 0),
-            new Vector3(-2, -1, 0)
-        };
+        
         
         _numberOfNucleosKilled++;
         if (_numberOfNucleosKilled == _numberOfNucleosToWin)
@@ -36,12 +39,22 @@ public class NucleoController
         }
         else
         {
-            GameController.Instance.GetNucleoSpawner().CreateNucleo(listPos[_numberOfNucleosKilled - 1]);
+            GameController.Instance.GetEnemySpawn().GetNucleoSpawner().CreateNucleo(GetNucleoPosition());
         }
     }
 
     private void AllNucleosWasDestroyed()
     {
        GameController.Instance.Interface.ActivateVictoryPanel();
+    }
+
+    public Vector3 GetNucleoPosition()
+    {
+        var pos = Random.Range(0, listPos.Count - 1);
+        var vec = listPos[pos];
+
+        listPos.Remove(vec);
+
+        return vec;
     }
 }

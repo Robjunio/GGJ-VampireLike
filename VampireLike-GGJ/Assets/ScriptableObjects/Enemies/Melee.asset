@@ -15,3 +15,4 @@ MonoBehaviour:
   damage: 30
   maxHealth: 50
   speed: 1.5
+  xpDropped: 1

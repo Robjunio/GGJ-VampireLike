@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Enemies
 {
-    public class TankAnimator : MonoBehaviour
+    public class EnemyAnimator : MonoBehaviour
     {
         private Animator _animator;
         private EnemyMovement _enemyMovement;

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1d6f8bb3b9fad164386c71dc059b0b69
+guid: 8321422a210f7dd4ab67ca2c266e4680
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,211 +117,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: warrior one attack sprite_0
+      name: warrior walk sprite_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 42
-        width: 46
-        height: 42
-      alignment: 9
-      pivot: {x: 0.3255961, y: 0.01378314}
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc72c95b10be7944195db38202c55e51
-      internalID: -178846427
+      spriteID: 15cb304dbdb23194a8abdb965735dfcc
+      internalID: -2101567167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warrior one attack sprite_1
+      name: warrior walk sprite_1
       rect:
         serializedVersion: 2
-        x: 46
-        y: 42
-        width: 46
-        height: 42
-      alignment: 9
-      pivot: {x: 0.3255961, y: 0.01378314}
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bb817b7cc6dcf4478b126aee3359694
-      internalID: -647256942
+      spriteID: 0c50914bc1b51eb48a4f4a21f4f792f5
+      internalID: 1938015739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warrior one attack sprite_2
+      name: warrior walk sprite_2
       rect:
         serializedVersion: 2
-        x: 92
-        y: 42
-        width: 46
-        height: 42
-      alignment: 9
-      pivot: {x: 0.3255961, y: 0.01378314}
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4beec79bba1c834bb2228a65ad77b9b
-      internalID: -1927062749
+      spriteID: 09fc3a6d8e366db4ba4b3bc9a3dc0f93
+      internalID: 1702015981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warrior one attack sprite_3
-      rect:
-        serializedVersion: 2
-        x: 138
-        y: 42
-        width: 46
-        height: 42
-      alignment: 9
-      pivot: {x: 0.3255961, y: 0.01378314}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c257608852776a4b8d94a610445c36f
-      internalID: -725910261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: warrior one attack sprite_4
-      rect:
-        serializedVersion: 2
-        x: 184
-        y: 42
-        width: 46
-        height: 42
-      alignment: 9
-      pivot: {x: 0.3255961, y: 0.01378314}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51977b6775de1a64ea43315e65a60a8c
-      internalID: -410168970
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: warrior one attack sprite_5
+      name: warrior walk sprite_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 46
-        height: 42
-      alignment: 9
-      pivot: {x: 0.3255961, y: 0.01378314}
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 605ecd60e1ef119418d687109f0f0626
-      internalID: -638494428
+      spriteID: b98e1215da0965a48b642c745cbc1727
+      internalID: -1357113457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warrior one attack sprite_6
+      name: warrior walk sprite_4
       rect:
         serializedVersion: 2
-        x: 46
+        x: 32
         y: 0
-        width: 46
-        height: 42
-      alignment: 9
-      pivot: {x: 0.3255961, y: 0.01378314}
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f0d3877bf67bbe4692d078486613016
-      internalID: -271221139
+      spriteID: 19cdac8af010af24eb8ed7b599a2ce45
+      internalID: -864696419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: warrior one attack sprite_7
+      name: warrior walk sprite_5
       rect:
         serializedVersion: 2
-        x: 92
+        x: 64
         y: 0
-        width: 46
-        height: 42
-      alignment: 9
-      pivot: {x: 0.3255961, y: 0.01378314}
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4419f0dc4a0feb4ab0034252c31fe88
-      internalID: 1228600030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: warrior one attack sprite_8
-      rect:
-        serializedVersion: 2
-        x: 138
-        y: 0
-        width: 46
-        height: 42
-      alignment: 9
-      pivot: {x: 0.3255961, y: 0.01378314}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2b1db7865467db4884d28122adbab7c
-      internalID: 2086910663
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: warrior one attack sprite_9
-      rect:
-        serializedVersion: 2
-        x: 184
-        y: 0
-        width: 46
-        height: 42
-      alignment: 9
-      pivot: {x: 0.3255961, y: 0.01378314}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99683650bf93523498dd75d221cca01e
-      internalID: -1013019151
+      spriteID: 0d85fe57c95f40047b7574186ce572fb
+      internalID: 378094185
       vertices: []
       indices: 
       edges: []
@@ -337,16 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      warrior one attack sprite_7: 1228600030
-      warrior one attack sprite_1: -647256942
-      warrior one attack sprite_5: -638494428
-      warrior one attack sprite_6: -271221139
-      warrior one attack sprite_9: -1013019151
-      warrior one attack sprite_0: -178846427
-      warrior one attack sprite_8: 2086910663
-      warrior one attack sprite_3: -725910261
-      warrior one attack sprite_4: -410168970
-      warrior one attack sprite_2: -1927062749
+      warrior walk sprite_1: 1938015739
+      warrior walk sprite_4: -864696419
+      warrior walk sprite_0: -2101567167
+      warrior walk sprite_5: 378094185
+      warrior walk sprite_3: -1357113457
+      warrior walk sprite_2: 1702015981
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

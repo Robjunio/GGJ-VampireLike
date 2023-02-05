@@ -21,6 +21,11 @@ public class XpController
 
     public void AddXp(int value)
     {
+        if (GameController.Instance.GameEnded)
+        {
+            return;
+        }
+        
         _totalXp += value;
         
         if (_totalXp >= xpNeededToLevelUp)

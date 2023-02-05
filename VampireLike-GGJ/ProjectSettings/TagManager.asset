@@ -9,6 +9,7 @@ TagManager:
   - Gun
   - Wall
   - Lightning
+  - Ground
   layers:
   - Default
   - TransparentFX

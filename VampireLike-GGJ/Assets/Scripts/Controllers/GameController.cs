@@ -8,8 +8,8 @@ public class GameController : MonoBehaviour
     private XpDrop _xpDrop;
 
     [SerializeField] private EnemySpawn _enemySpawn;
-    
 
+    public bool GameEnded;
     public GameInterface Interface;
 
     private void Awake()

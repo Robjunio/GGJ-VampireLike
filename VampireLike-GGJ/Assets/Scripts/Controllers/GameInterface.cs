@@ -25,11 +25,13 @@ public class GameInterface : MonoBehaviour
 
     public void ActivateVictoryPanel()
     {
+        GameController.Instance.GameEnded = true;
         VictoryPanel.SetActive(true);
     }
 
     public void ActivateDefeatPanel()
     {
+        GameController.Instance.GameEnded = true;
         DefeatPanel.SetActive(true);
     }
 }

@@ -24,8 +24,8 @@ public class RotativeOrbeController : MonoBehaviour
 
         StartCoroutine(AlternatingAttack());
 
-        // LevelUp(); // test level 2
-        // LevelUp(); // test level 3
+        //LevelUp(); // test level 2
+        //LevelUp(); // test level 3
     }
 
     public void LevelUp()

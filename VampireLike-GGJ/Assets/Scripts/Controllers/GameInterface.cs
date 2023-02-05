@@ -25,13 +25,11 @@ public class GameInterface : MonoBehaviour
 
     public void ActivateVictoryPanel()
     {
-        Time.timeScale = 0;
         VictoryPanel.SetActive(true);
     }
 
     public void ActivateDefeatPanel()
     {
-        Time.timeScale = 0;
         DefeatPanel.SetActive(true);
     }
 }

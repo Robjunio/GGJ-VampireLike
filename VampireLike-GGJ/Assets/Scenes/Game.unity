@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -417,6 +418,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc7493b88f109a349a952e844a7a1079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioData: {fileID: 519420034}
 --- !u!1 &553312491
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,6 +1383,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 695340153105438970, guid: 952505265468d9e4d8cfd436f1092bb1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1326897400582607110, guid: 952505265468d9e4d8cfd436f1092bb1, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1415,6 +1433,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1326897400803117407, guid: 952505265468d9e4d8cfd436f1092bb1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815166562182147966, guid: 952505265468d9e4d8cfd436f1092bb1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929117781579536837, guid: 952505265468d9e4d8cfd436f1092bb1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6369482327350240823, guid: 952505265468d9e4d8cfd436f1092bb1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6747151095410680759, guid: 952505265468d9e4d8cfd436f1092bb1, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1491,6 +1525,78 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 271875512, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.618146
+      objectReference: {fileID: 0}
+    - target: {fileID: 271875512, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.9166297
+      objectReference: {fileID: 0}
+    - target: {fileID: 271875512, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.3872084
+      objectReference: {fileID: 0}
+    - target: {fileID: 271875512, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 271875512, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -317
+      objectReference: {fileID: 0}
+    - target: {fileID: 271875512, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -321
+      objectReference: {fileID: 0}
+    - target: {fileID: 271875512, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.499939
+      objectReference: {fileID: 0}
+    - target: {fileID: 271875512, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263358469, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263358469, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.93700004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263358469, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263358469, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.629
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263358469, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -256
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263358469, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -219.5885
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263358469, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263358469, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1780560664, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5889935592495319424, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5889935592574062235, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1581,6 +1687,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5889935593444714990, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5889935593923026440, guid: 8f1d8e154c441514384571ebab9e35c2, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

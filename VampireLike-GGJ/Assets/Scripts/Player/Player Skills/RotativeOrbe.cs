@@ -13,7 +13,6 @@ public class RotativeOrbe : MonoBehaviour
     
     public void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log(col.transform.name);
         switch (col.transform.tag)
         {
             case "Enemy":

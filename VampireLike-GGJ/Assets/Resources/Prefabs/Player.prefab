@@ -496,6 +496,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun
       objectReference: {fileID: 0}
+    - target: {fileID: 3034618047313093943, guid: 08363fbd19165c24cbbb7874befb1ce9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6231907714520244362, guid: 08363fbd19165c24cbbb7874befb1ce9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -557,6 +561,10 @@ PrefabInstance:
     - target: {fileID: 2078047944668960201, guid: 3b102d69d9a03804a8a147cdd4ee8dcf, type: 3}
       propertyPath: m_Name
       value: Rotative Orbe
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078047944668960201, guid: 3b102d69d9a03804a8a147cdd4ee8dcf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4277490830073866257, guid: 3b102d69d9a03804a8a147cdd4ee8dcf, type: 3}
       propertyPath: m_RootOrder
@@ -754,6 +762,10 @@ PrefabInstance:
     - target: {fileID: 3938931908105992245, guid: a8b8fcbc4e9d6c04a85817eeb5c0722a, type: 3}
       propertyPath: m_Name
       value: Lightning
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938931908105992245, guid: a8b8fcbc4e9d6c04a85817eeb5c0722a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5361894875385455853, guid: a8b8fcbc4e9d6c04a85817eeb5c0722a, type: 3}
       propertyPath: m_RootOrder
@@ -961,7 +973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5207506522118205350, guid: bc3b4721138cbd240b80d3cda0dd9a53, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5586484658600143214, guid: bc3b4721138cbd240b80d3cda0dd9a53, type: 3}
       propertyPath: m_IsActive

@@ -117,7 +117,6 @@ public class LightningController : MonoBehaviour
             if (randomEnemy == null) yield return null;
             else
             {
-                Debug.Log("Strike: " + randomEnemy.name);
 
                 var lightning = Instantiate(
                     lightningPrefab, randomEnemy.transform.position + Vector3.up * 2, Quaternion.identity);

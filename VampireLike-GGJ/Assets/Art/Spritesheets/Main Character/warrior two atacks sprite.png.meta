@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 227950c865f1ac7468c80a5d79ffe8c8
+guid: 1675b0a0067a21746a44e0d5f031c21f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,337 +117,316 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Melee_0
+      name: warrior two atacks sprite_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 97
-        width: 25
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 84
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.48943007, y: 0.01378314}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e127a5c067de7e40888aa97c07c0ba3
-      internalID: -627292827
+      spriteID: 00e769ed38a5a294aae93850a42b6502
+      internalID: 1677966819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_1
+      name: warrior two atacks sprite_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 101
-        width: 27
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 61
+        y: 84
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.48414525, y: 0.01378314}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d0dda6f0d787b14ba81fd83330f4942
-      internalID: 862356835
+      spriteID: 27253d3cc05647b4c947715d09e3e290
+      internalID: -133238022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_2
+      name: warrior two atacks sprite_2
       rect:
         serializedVersion: 2
-        x: 66
-        y: 107
-        width: 29
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 122
+        y: 84
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.4947152, y: 0.01378314}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24c52e731e7af1a47881877bfd288b49
-      internalID: -1962639673
+      spriteID: 92593e84d24dc784d837ca60b65b484a
+      internalID: -153145030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_3
+      name: warrior two atacks sprite_3
       rect:
         serializedVersion: 2
-        x: 97
-        y: 106
-        width: 31
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 183
+        y: 84
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.50000024, y: 0.01378314}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 696d70c85f646104db2ddcad85f3b1f9
-      internalID: -1703955086
+      spriteID: 966d8b44324a4d946a3ea7256250d86e
+      internalID: -1920901666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_4
+      name: warrior two atacks sprite_4
       rect:
         serializedVersion: 2
-        x: 7
-        y: 64
-        width: 19
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 244
+        y: 84
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.50528556, y: 0.01378314}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10108734e48f7554f8f30ba755949359
-      internalID: 748525469
+      spriteID: d33d3dcb686c0634eb9099034dc136d9
+      internalID: -949600611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_5
+      name: warrior two atacks sprite_5
       rect:
         serializedVersion: 2
-        x: 41
-        y: 74
-        width: 17
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 42
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.51056993, y: 0.01378314}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c0161d866b782b4d919d66524dfa233
-      internalID: -1943402603
+      spriteID: 927be8e4d97ffa64d8dd79574e4cfbce
+      internalID: -1214021691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_6
+      name: warrior two atacks sprite_6
       rect:
         serializedVersion: 2
-        x: 73
-        y: 75
-        width: 17
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 61
+        y: 42
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.51057, y: 0.01378314}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0268bef633aa567448af86738c60a905
-      internalID: 1859301023
+      spriteID: ccfa095e645d6f74d9caaec021575062
+      internalID: 1696250385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_7
+      name: warrior two atacks sprite_7
       rect:
         serializedVersion: 2
-        x: 107
-        y: 69
-        width: 15
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 122
+        y: 42
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5052853, y: 0.01378314}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ede2567aa931b0448ee2ac01b66c5ff
-      internalID: -920900683
+      spriteID: 9159b66451c0a5542a863e4df02560ad
+      internalID: 291713157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_8
+      name: warrior two atacks sprite_8
       rect:
         serializedVersion: 2
-        x: 35
-        y: 37
-        width: 27
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 183
+        y: 42
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.50000024, y: 0.01378314}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d87000ab01a81a45b7a92bc33279680
-      internalID: -1031724847
+      spriteID: 9f9a3bb69dda68d4ea4e4acf7199a735
+      internalID: 4659949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_9
+      name: warrior two atacks sprite_9
       rect:
         serializedVersion: 2
-        x: 66
-        y: 45
-        width: 29
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 244
+        y: 42
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.49471545, y: 0.01378314}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13938eae7daeb6840a33acdb032b5880
-      internalID: 967416746
+      spriteID: 9ea351dce558e874f96f0baaeb83edfc
+      internalID: 262845678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_10
+      name: warrior two atacks sprite_10
       rect:
         serializedVersion: 2
-        x: 97
-        y: 43
-        width: 31
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd74bf005755fd64fa430e6a69395f29
-      internalID: 1140059867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Melee_11
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 33
-        width: 25
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7dae3854cc45b042a762046895a44fe
-      internalID: 1334667444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Melee_12
-      rect:
-        serializedVersion: 2
-        x: 6
+        x: 0
         y: 0
-        width: 19
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01378314}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87096427502cb7244934ccf9edb64d1f
-      internalID: -874037289
+      spriteID: 3ea5f4a46e7632e4d9f9a370a5f88f81
+      internalID: -1778026262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_13
+      name: warrior two atacks sprite_11
       rect:
         serializedVersion: 2
-        x: 38
-        y: 10
-        width: 17
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 61
+        y: 0
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.505285, y: 0.01378314}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff4f147895587894994d0afc92297a63
-      internalID: -1892466986
+      spriteID: 8fa01d478044e34488d2bacc587e2366
+      internalID: -2010093187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_14
+      name: warrior two atacks sprite_12
       rect:
         serializedVersion: 2
-        x: 70
-        y: 11
-        width: 17
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 122
+        y: 0
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.51585513, y: 0.01378314}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8aa430e0f5906ba43b94fa7f76aea831
-      internalID: 592443807
+      spriteID: bda956a41e0288b489419f6db41c59d5
+      internalID: 1074862253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_15
+      name: warrior two atacks sprite_13
       rect:
         serializedVersion: 2
-        x: 102
-        y: 5
-        width: 15
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 183
+        y: 0
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01378314}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b594792238020184c8315567c5ec48e5
-      internalID: 915694268
+      spriteID: d0a817073507c874aadddd9897513c72
+      internalID: -1970029375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warrior two atacks sprite_14
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 0
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.4963449, y: 0.01378314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12dc98a542b740c41b643c7e063c4482
+      internalID: 1790270484
       vertices: []
       indices: 
       edges: []
@@ -463,22 +442,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Melee_12: -874037289
-      Melee_8: -1031724847
-      Melee_11: 1334667444
-      Melee_4: 748525469
-      Melee_14: 592443807
-      Melee_5: -1943402603
-      Melee_13: -1892466986
-      Melee_2: -1962639673
-      Melee_1: 862356835
-      Melee_6: 1859301023
-      Melee_0: -627292827
-      Melee_3: -1703955086
-      Melee_9: 967416746
-      Melee_7: -920900683
-      Melee_15: 915694268
-      Melee_10: 1140059867
+      warrior two atacks sprite_8: 4659949
+      warrior two atacks sprite_0: 1677966819
+      warrior two atacks sprite_1: -133238022
+      warrior two atacks sprite_10: -1778026262
+      warrior two atacks sprite_11: -2010093187
+      warrior two atacks sprite_4: -949600611
+      warrior two atacks sprite_9: 262845678
+      warrior two atacks sprite_12: 1074862253
+      warrior two atacks sprite_2: -153145030
+      warrior two atacks sprite_5: -1214021691
+      warrior two atacks sprite_6: 1696250385
+      warrior two atacks sprite_7: 291713157
+      warrior two atacks sprite_3: -1920901666
+      warrior two atacks sprite_14: 1790270484
+      warrior two atacks sprite_13: -1970029375
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

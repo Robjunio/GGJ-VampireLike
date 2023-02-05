@@ -9,12 +9,16 @@ namespace Enemies
         [HideInInspector] public float currentHealth;
         [HideInInspector] public float currentSpeed;
         public EnemyScriptableObject enemyData;
-
+        public Animator enemyAnimator;
+        
+        
         private void Awake()
         {
             currentDamage = enemyData.Damage;
             currentHealth = enemyData.MaxHealth;
             currentSpeed = enemyData.Speed;
+
+            enemyAnimator = GetComponent<Animator>();
         }
 
         public void TakeDamage(float damage)
@@ -40,7 +44,9 @@ namespace Enemies
             {
                 PlayerStats player = collision.gameObject.GetComponent<PlayerStats>();
                 player.TakeDamage(currentDamage);
+                enemyAnimator.SetBool("atk", true);
             }
+            //enemyAnimator.SetBool("atk", false);
         }
     }
 }

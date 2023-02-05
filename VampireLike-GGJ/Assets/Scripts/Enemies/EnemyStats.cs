@@ -8,6 +8,7 @@ namespace Enemies
         [HideInInspector] public float currentDamage;
         [HideInInspector] public float currentHealth;
         [HideInInspector] public float currentSpeed;
+        [HideInInspector] public int currentXpDropped;
         public EnemyScriptableObject enemyData;
 
         private void Awake()
@@ -15,6 +16,7 @@ namespace Enemies
             currentDamage = enemyData.Damage;
             currentHealth = enemyData.MaxHealth;
             currentSpeed = enemyData.Speed;
+            currentXpDropped = enemyData.XpDropped;
         }
 
         public void TakeDamage(float damage)
@@ -29,6 +31,7 @@ namespace Enemies
 
         private void Kill()
         {
+            GameController.Instance.GetXpDrop().CreateXpOrbs(currentXpDropped, transform);
             GameController.Instance.GetEnemySpawn().RemoveEnemyFromList(gameObject);
             Destroy(gameObject);
         }

@@ -24,8 +24,6 @@ public class EnemySpawn : MonoBehaviour
     
     private List<GameObject> EnemyList;
 
-    private BoxCollider2D _boxCollider2D;
-    
     //Controle de tempo
     
     private float currentTime;
@@ -36,7 +34,6 @@ public class EnemySpawn : MonoBehaviour
         _nucleoController = new NucleoController();
         TryGetComponent(out _nucleoSpawner);
         EnemyList = new List<GameObject>();
-        TryGetComponent(out _boxCollider2D);
     }
     
 
@@ -93,7 +90,7 @@ public class EnemySpawn : MonoBehaviour
             }
         }
         var pos = EnemySpawnPos();
-        var obj = Instantiate(_enemy1Prefab, pos, Quaternion.identity);
+        var obj = Instantiate(prefab, pos, Quaternion.identity);
         EnemyList.Add(obj);
     }
 

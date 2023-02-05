@@ -26,5 +26,13 @@ namespace Enemies
             get => speed;
             private set => speed = value;
         }
+
+        [SerializeField] private int xpDropped;
+
+        public int XpDropped
+        {
+            get => xpDropped;
+            private set => xpDropped = value;
+        }
     }
 }

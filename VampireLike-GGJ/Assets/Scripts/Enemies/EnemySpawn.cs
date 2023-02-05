@@ -35,7 +35,12 @@ public class EnemySpawn : MonoBehaviour
         TryGetComponent(out _nucleoSpawner);
         EnemyList = new List<GameObject>();
     }
-    
+
+    private void Start()
+    {
+        _nucleoSpawner.CreateNucleo(_nucleoController.GetNucleoPosition());
+    }
+
 
     private void Update()
     {

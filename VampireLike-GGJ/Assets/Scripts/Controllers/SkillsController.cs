@@ -14,9 +14,9 @@ public class SkillsController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI shieldLvl;
     private GameObject _playerSkills;
 
-    private void Awake()
+    private void Start()
     {
-        _playerSkills = transform.parent.Find("Player").gameObject.transform.GetChild(2).gameObject;
+        _playerSkills = GameObject.FindGameObjectWithTag("Player").gameObject.transform.GetChild(2).gameObject;
     }
 
     public void LevelUpWhip()

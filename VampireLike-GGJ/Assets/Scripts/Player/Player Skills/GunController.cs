@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour
 {
-    [SerializeField] GameObject bulletPrefab;
+    [SerializeField] private GameObject bulletPrefab;
     public int damage;
     public int bullets;
     private float _attackInterval;
@@ -31,16 +31,16 @@ public class GunController : MonoBehaviour
         switch (_level)
         {
             case 2:
-                _attackInterval /= 2;
+                _attackInterval /= 2; // increase rate of fire
                 break;
             case 3:
-                bullets++; // Faster attack speed
+                bullets++; // increase number of bullets for gun spray
                 break;
             case 4:
-                _attackInterval /= 2; // Increase damage
+                _attackInterval /= 2; // Increase rate of fire
                 break;
             case 5:
-                bullets++; // Increase damage
+                bullets++; // Increase number of bullets for gun spray
                 break;
         }
     }
@@ -68,19 +68,19 @@ public class GunController : MonoBehaviour
 
     private Transform FindClosestEnemy()
     {
-        // Encontre todos os jogadores na cena
+        // Encontre todos os inimigos na cena
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
-        // Verifique se há algum jogador
+        // Verifique se há algum inimigo
         if (enemies.Length == 0)
         {
             return null;
         }
 
-        // Defina o jogador mais próximo como o primeiro jogador na lista
+        // Defina o jogador mais próximo como o primeiro inimigo na lista
         Transform closest = enemies[0].transform;
 
-        // Encontre o jogador mais próximo
+        // Encontre o inimigo mais próximo
         foreach (GameObject enemy in enemies)
         {
             if (Vector2.Distance(transform.position, enemy.transform.position) <
@@ -113,6 +113,7 @@ public class GunController : MonoBehaviour
         while (i < barrelSize)
         {
             var bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            bullet.SetActive(true);
             var rb = bullet.GetComponent<Rigidbody2D>();
 
             rb.velocity = direction * 2;

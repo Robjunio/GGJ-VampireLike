@@ -8,6 +8,7 @@ TagManager:
   - Nodule
   - Gun
   - Wall
+  - Lightning
   layers:
   - Default
   - TransparentFX

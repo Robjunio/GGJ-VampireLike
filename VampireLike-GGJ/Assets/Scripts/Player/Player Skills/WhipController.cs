@@ -10,6 +10,8 @@ public class WhipController : MonoBehaviour
     private float _attackInterval;
     private int _level;
     private bool _facingRight = true;
+
+    public Animator playerAtkAnim;
     
     private void Start()
     {
@@ -17,9 +19,11 @@ public class WhipController : MonoBehaviour
         damage = 40;
         _attackInterval = 3f;
 
+        playerAtkAnim = playerAtkAnim.GetComponent<Animator>();
+
         StartCoroutine(AlternatingAttack());
         
-        // LevelUp(); // test level 2
+         //LevelUp(); // test level 2
         // LevelUp(); // test level 3
     }
 
@@ -53,11 +57,13 @@ public class WhipController : MonoBehaviour
     {
         while (true)
         {
-            Attack(_facingRight); 
-            yield return new WaitForSecondsRealtime(_attackInterval - (_attackInterval * 0.8f));
+            playerAtkAnim.Play("PlayerAtack1");
+                Attack(_facingRight); 
+                yield return new WaitForSecondsRealtime(_attackInterval - (_attackInterval * 0.8f));
 
             if (_level >= 2)
             {
+                playerAtkAnim.Play("PlayerAtack2");
                 Attack(!_facingRight);
                 yield return new WaitForSecondsRealtime(_attackInterval - (_attackInterval * 0.8f));
                 

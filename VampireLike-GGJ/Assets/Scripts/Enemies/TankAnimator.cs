@@ -31,7 +31,7 @@ namespace Enemies
 
         private void CheckSpriteDirection()
         {
-            _spriteRenderer.flipX = _enemyMovement.Rigidbody.velocity.x < 0;
+            _spriteRenderer.flipX = _enemyMovement.Rigidbody.velocity.x > 0;
         }
     }
 }

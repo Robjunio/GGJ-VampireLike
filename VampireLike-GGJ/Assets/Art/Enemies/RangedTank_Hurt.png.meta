@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 91d8314757f601c44b00cbe28df5f519
+guid: 025393ab8ae41394b9c26cf23dea2cc9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,9 +42,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
@@ -115,112 +115,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: warrior death sprite_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 44
-        height: 30
-      alignment: 9
-      pivot: {x: 0.119482465, y: 0.0039178124}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b1997cfbf1f0a66428821cdb4b7e6142
-      internalID: -1885213714
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: warrior death sprite_1
-      rect:
-        serializedVersion: 2
-        x: 44
-        y: 0
-        width: 44
-        height: 30
-      alignment: 9
-      pivot: {x: 0.103627555, y: 0.0039178124}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 100ea00a510ef644a81008f493c1db09
-      internalID: -619614541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: warrior death sprite_2
-      rect:
-        serializedVersion: 2
-        x: 88
-        y: 0
-        width: 44
-        height: 30
-      alignment: 9
-      pivot: {x: 0.14062239, y: 0.034922946}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e668affb00371454bb038ce34a413a88
-      internalID: 679985349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: warrior death sprite_3
-      rect:
-        serializedVersion: 2
-        x: 132
-        y: 0
-        width: 44
-        height: 30
-      alignment: 9
-      pivot: {x: 0.14062257, y: 0.011669097}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8d11773c7a41d64fb65bcb7479000c4
-      internalID: -439600536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: warrior death sprite_4
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 0
-        width: 44
-        height: 30
-      alignment: 9
-      pivot: {x: 0.13533749, y: 0.01942038}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5553e36dc4fd8c4995586814676bb67
-      internalID: -1225654790
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -231,12 +126,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      warrior death sprite_2: 679985349
-      warrior death sprite_3: -439600536
-      warrior death sprite_1: -619614541
-      warrior death sprite_0: -1885213714
-      warrior death sprite_4: -1225654790
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

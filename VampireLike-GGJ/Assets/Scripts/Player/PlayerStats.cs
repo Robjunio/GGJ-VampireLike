@@ -14,10 +14,13 @@ namespace Player
         private bool _isInvincible;
         private float _invincibilityTimer;
 
+        private Animator _animator;
+
         private void Awake()
         {
             currentHealth = playerData.MaxHealth;
             currentSpeed = playerData.Speed;
+            transform.GetChild(0).TryGetComponent(out _animator);
         }
 
         private void Update()
@@ -52,7 +55,8 @@ namespace Player
 
         private void Kill()
         {
-            Debug.Log("Game Over");
+            _animator.Play("PlayerDeath");
+            GameController.Instance.Interface.ActivateDefeatPanel();
         }
     }
 }

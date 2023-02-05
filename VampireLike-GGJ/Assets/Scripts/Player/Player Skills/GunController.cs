@@ -115,7 +115,7 @@ public class GunController : MonoBehaviour
 
         while (i < barrelSize)
         {
-            var bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            var bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity, transform);
             bullet.SetActive(true);
             var rb = bullet.GetComponent<Rigidbody2D>();
 

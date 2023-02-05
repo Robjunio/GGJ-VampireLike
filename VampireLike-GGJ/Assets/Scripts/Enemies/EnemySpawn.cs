@@ -9,9 +9,6 @@ public class EnemySpawn : MonoBehaviour
     private NucleoController _nucleoController;
     private NucleoSpawner _nucleoSpawner;
 
-    [SerializeField] private Transform _test;
-    private BoxCollider2D _boxCollider2D;
-        
     [SerializeField] private GameObject _enemy1Prefab;
     [SerializeField] private GameObject _enemy2Prefab;
     [SerializeField] private GameObject _enemy3Prefab;
@@ -37,8 +34,6 @@ public class EnemySpawn : MonoBehaviour
         _nucleoController = new NucleoController();
         TryGetComponent(out _nucleoSpawner);
         EnemyList = new List<GameObject>();
-
-        _test.TryGetComponent(out _boxCollider2D);
     }
 
     private void Start()
@@ -70,10 +65,7 @@ public class EnemySpawn : MonoBehaviour
     private Vector3 EnemySpawnPos()
     {
         var pos = new Vector3(Random.Range(MaxX, MinX), Random.Range(MaxY, MinY), 0);
-        if (TouchGround(pos))
-        {
-            print("Tocou na grama");
-        }
+        
         return pos;
     }
 
@@ -116,13 +108,5 @@ public class EnemySpawn : MonoBehaviour
     public NucleoController GetNucleoController()
     {
         return _nucleoController;
-    }
-
-    public bool TouchGround(Vector3 position)
-    {
-        _test.position = position;
-        RaycastHit2D rcWall = Physics2D.BoxCast(_boxCollider2D.bounds.center, _boxCollider2D.bounds.size,
-            0, Vector2.down, 0f, whatIsGround);
-        return rcWall.collider != null;
     }
 }

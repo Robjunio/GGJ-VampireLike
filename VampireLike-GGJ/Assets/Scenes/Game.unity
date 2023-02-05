@@ -603,6 +603,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 522597017, guid: a75f5c0f28cfb504eafaad1f6bbd8bea, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2365054991758086, guid: a75f5c0f28cfb504eafaad1f6bbd8bea, type: 3}
       propertyPath: m_Name
       value: EnemyController
@@ -770,6 +774,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5505537467466880073, guid: ccf16bed5b33cda4b95ccaaa5cc27d6f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 5505537468474466125, guid: ccf16bed5b33cda4b95ccaaa5cc27d6f, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[1].Array.data[9].x
       value: -21

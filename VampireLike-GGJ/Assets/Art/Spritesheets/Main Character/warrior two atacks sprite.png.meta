@@ -1,0 +1,465 @@
+fileFormatVersion: 2
+guid: 1675b0a0067a21746a44e0d5f031c21f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: warrior two atacks sprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.48943007, y: 0.01378314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e769ed38a5a294aae93850a42b6502
+      internalID: 1677966819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warrior two atacks sprite_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 84
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.48414525, y: 0.01378314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27253d3cc05647b4c947715d09e3e290
+      internalID: -133238022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warrior two atacks sprite_2
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 84
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.4947152, y: 0.01378314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92593e84d24dc784d837ca60b65b484a
+      internalID: -153145030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warrior two atacks sprite_3
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 84
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.50000024, y: 0.01378314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 966d8b44324a4d946a3ea7256250d86e
+      internalID: -1920901666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warrior two atacks sprite_4
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 84
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.50528556, y: 0.01378314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33d3dcb686c0634eb9099034dc136d9
+      internalID: -949600611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warrior two atacks sprite_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 42
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.51056993, y: 0.01378314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927be8e4d97ffa64d8dd79574e4cfbce
+      internalID: -1214021691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warrior two atacks sprite_6
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 42
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.51057, y: 0.01378314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfa095e645d6f74d9caaec021575062
+      internalID: 1696250385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warrior two atacks sprite_7
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 42
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5052853, y: 0.01378314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9159b66451c0a5542a863e4df02560ad
+      internalID: 291713157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warrior two atacks sprite_8
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 42
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.50000024, y: 0.01378314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9a3bb69dda68d4ea4e4acf7199a735
+      internalID: 4659949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warrior two atacks sprite_9
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 42
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.49471545, y: 0.01378314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea351dce558e874f96f0baaeb83edfc
+      internalID: 262845678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warrior two atacks sprite_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01378314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea5f4a46e7632e4d9f9a370a5f88f81
+      internalID: -1778026262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warrior two atacks sprite_11
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 0
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.505285, y: 0.01378314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa01d478044e34488d2bacc587e2366
+      internalID: -2010093187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warrior two atacks sprite_12
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 0
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.51585513, y: 0.01378314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda956a41e0288b489419f6db41c59d5
+      internalID: 1074862253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warrior two atacks sprite_13
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 0
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01378314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0a817073507c874aadddd9897513c72
+      internalID: -1970029375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warrior two atacks sprite_14
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 0
+        width: 61
+        height: 42
+      alignment: 9
+      pivot: {x: 0.4963449, y: 0.01378314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12dc98a542b740c41b643c7e063c4482
+      internalID: 1790270484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      warrior two atacks sprite_8: 4659949
+      warrior two atacks sprite_0: 1677966819
+      warrior two atacks sprite_1: -133238022
+      warrior two atacks sprite_10: -1778026262
+      warrior two atacks sprite_11: -2010093187
+      warrior two atacks sprite_4: -949600611
+      warrior two atacks sprite_9: 262845678
+      warrior two atacks sprite_12: 1074862253
+      warrior two atacks sprite_2: -153145030
+      warrior two atacks sprite_5: -1214021691
+      warrior two atacks sprite_6: 1696250385
+      warrior two atacks sprite_7: 291713157
+      warrior two atacks sprite_3: -1920901666
+      warrior two atacks sprite_14: 1790270484
+      warrior two atacks sprite_13: -1970029375
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

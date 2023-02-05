@@ -8,4 +8,9 @@ public class SceneManager : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
     }
+
+    public static void LoadScene(string lvlName)
+    {
+        throw new System.NotImplementedException();
+    }
 }

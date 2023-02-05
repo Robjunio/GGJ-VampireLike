@@ -50,6 +50,9 @@ public class WhipController : MonoBehaviour
             case 5:
                 damage = 160; // Increase damage
                 break;
+            case > 5:
+                damage += 5;
+                break;
         }
     }
 

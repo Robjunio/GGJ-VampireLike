@@ -46,6 +46,9 @@ public class RotativeOrbeController : MonoBehaviour
             case 5:
                 _orbes++; // Increase number of orbes
                 break;
+            case > 5:
+                damage += 5;
+                break;
         }
     }
 

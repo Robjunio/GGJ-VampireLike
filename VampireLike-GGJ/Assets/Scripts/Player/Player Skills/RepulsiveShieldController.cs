@@ -42,6 +42,9 @@ public class RepulsiveShieldController : MonoBehaviour
             case 5:
                 damage = 60; // increase shield damage
                 break;
+            case > 5:
+                damage += 5;
+                break;
         }
     }
 

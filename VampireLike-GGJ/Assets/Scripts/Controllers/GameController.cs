@@ -6,9 +6,9 @@ public class GameController : MonoBehaviour
     
     private XpController _xpController;
     private XpDrop _xpDrop;
+
+    [SerializeField] private EnemySpawn _enemySpawn;
     
-    private NucleoController _nucleoController;
-    private NucleoSpawner _nucleoSpawner;
 
     public GameInterface Interface;
 
@@ -19,13 +19,10 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        TryGetComponent(out _nucleoSpawner);
         TryGetComponent(out _xpDrop);
-        _nucleoController = new NucleoController();
+        
         _xpController = new XpController();
         _xpController.Start();
-        
-        _nucleoSpawner.CreateNucleo(Vector3.one);
     }
     
     // The exp orb will get acess to the controller by this function
@@ -34,18 +31,13 @@ public class GameController : MonoBehaviour
         return _xpController;
     }
 
-    public NucleoController GetNucleoController()
-    {
-        return _nucleoController;
-    }
-
-    public NucleoSpawner GetNucleoSpawner()
-    {
-        return _nucleoSpawner;
-    }
-
     public XpDrop GetXpDrop()
     {
         return _xpDrop;
+    }
+
+    public EnemySpawn GetEnemySpawn()
+    {
+        return _enemySpawn;
     }
 }

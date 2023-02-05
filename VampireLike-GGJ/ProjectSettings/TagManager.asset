@@ -7,11 +7,12 @@ TagManager:
   - Enemy
   - Nodule
   - Gun
+  - Wall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - UI

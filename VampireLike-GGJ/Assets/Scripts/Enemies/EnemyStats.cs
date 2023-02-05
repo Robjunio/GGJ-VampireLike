@@ -20,8 +20,6 @@ namespace Enemies
         public void TakeDamage(float damage)
         {
             currentHealth -= damage;
-            
-            Debug.Log(currentHealth);
 
             if (currentHealth <= 0)
             {
@@ -31,6 +29,7 @@ namespace Enemies
 
         private void Kill()
         {
+            GameController.Instance.GetEnemySpawn().RemoveEnemyFromList(gameObject);
             Destroy(gameObject);
         }
 

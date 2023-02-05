@@ -5,7 +5,7 @@ public class NucleoController
     private int _numberOfNucleosToWin = 4;
     private int _numberOfNucleosKilled;
 
-    private int _nucleoBaseLife = 10000;
+    private int _nucleoBaseLife = 500;
 
     public int GetNucleoLife()
     {
@@ -36,12 +36,17 @@ public class NucleoController
         }
         else
         {
-            GameController.Instance.GetNucleoSpawner().CreateNucleo(listPos[_numberOfNucleosKilled - 1]);
+            GameController.Instance.GetEnemySpawn();
         }
     }
 
     private void AllNucleosWasDestroyed()
     {
        GameController.Instance.Interface.ActivateVictoryPanel();
+    }
+
+    public void GetNucleoPosition()
+    {
+        
     }
 }

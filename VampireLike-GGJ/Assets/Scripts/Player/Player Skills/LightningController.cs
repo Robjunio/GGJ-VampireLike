@@ -48,6 +48,9 @@ public class LightningController : MonoBehaviour
             case 5:
                 lightnings++; // Increase number of lightnings for strike
                 break;
+            case > 5:
+                damage += 5;
+                break;
         }
     }
 

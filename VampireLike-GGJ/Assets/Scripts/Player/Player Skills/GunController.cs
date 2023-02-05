@@ -42,6 +42,9 @@ public class GunController : MonoBehaviour
             case 5:
                 bullets++; // Increase number of bullets for gun spray
                 break;
+            case > 5:
+                damage += 5;
+                break;
         }
     }
 

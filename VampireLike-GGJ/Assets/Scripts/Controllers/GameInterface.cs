@@ -31,7 +31,6 @@ public class GameInterface : MonoBehaviour
 
     public void ActivateDefeatPanel()
     {
-        Time.timeScale = 0;
         DefeatPanel.SetActive(true);
     }
 }

@@ -25,6 +25,12 @@ namespace Player
 
         private void Update()
         {
+            if (GameController.Instance.GameEnded)
+            {
+                enabled = false;
+                return;
+            }
+            
             if (_invincibilityTimer > 0)
             {
                 _invincibilityTimer -= Time.deltaTime;

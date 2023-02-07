@@ -26,6 +26,7 @@ public class SkillsController : MonoBehaviour
         whipLvl.text = (int.Parse(whipLvl.text) + 1).ToString();        
         
         gameObject.SetActive(false);
+        GameController.Instance.Interface.SetTimeScale(1);
         
     }
     
@@ -38,6 +39,7 @@ public class SkillsController : MonoBehaviour
         gunLvl.text = (int.Parse(gunLvl.text) + 1).ToString();     
         
         gameObject.SetActive(false);
+        GameController.Instance.Interface.SetTimeScale(1);
 
     }    
     
@@ -50,7 +52,7 @@ public class SkillsController : MonoBehaviour
         rotativeOrbeLvl.text = (int.Parse(rotativeOrbeLvl.text) + 1).ToString();     
 
         gameObject.SetActive(false);
-
+        GameController.Instance.Interface.SetTimeScale(1);
     }    
     
     public void LevelUpLightning()
@@ -62,6 +64,7 @@ public class SkillsController : MonoBehaviour
         lightningLvl.text = (int.Parse(lightningLvl.text) + 1).ToString();     
 
         gameObject.SetActive(false);
+        GameController.Instance.Interface.SetTimeScale(1);
     }    
     
     public void LevelUpShield()
@@ -73,6 +76,7 @@ public class SkillsController : MonoBehaviour
         shieldLvl.text = (int.Parse(shieldLvl.text) + 1).ToString();     
 
         gameObject.SetActive(false);
+        GameController.Instance.Interface.SetTimeScale(1);
     }
 
 }

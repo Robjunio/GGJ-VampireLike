@@ -8,6 +8,8 @@ namespace Player
         private PlayerMovement _playerMovement;
         private SpriteRenderer _spriteRenderer;
 
+        private bool _dead;
+
         private void Awake()
         {
             _animator = GetComponentInChildren<Animator>();
@@ -17,6 +19,12 @@ namespace Player
 
         private void Update()
         {
+            if (GameController.Instance.GameEnded)
+            {
+                enabled = false;
+                return;
+            }
+            
             if (_playerMovement.direction.x != 0 || _playerMovement.direction.y != 0)
             {
                 _animator.SetBool("Move", true);

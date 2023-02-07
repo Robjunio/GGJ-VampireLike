@@ -58,6 +58,10 @@ public class LightningController : MonoBehaviour
     {
         while (true)
         {
+            if (GameController.Instance.GameEnded)
+            {
+                break;
+            }
             
             if (_isFirstIteration) yield return new WaitForSecondsRealtime(3f);
             else{

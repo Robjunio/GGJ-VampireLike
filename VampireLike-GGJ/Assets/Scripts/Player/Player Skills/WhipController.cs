@@ -29,6 +29,11 @@ public class WhipController : MonoBehaviour
 
     private void Update()
     {
+        if (GameController.Instance.GameEnded)
+        {
+            return;
+        }
+        
         // Update facing 
         if (Input.GetAxis("Horizontal") < 0) _facingRight = false;
         else if (Input.GetAxis("Horizontal") > 0) _facingRight = true;
@@ -60,6 +65,11 @@ public class WhipController : MonoBehaviour
     {
         while (true)
         {
+            if (GameController.Instance.GameEnded)
+            {
+                break;
+            }
+            
             playerAtkAnim.Play("PlayerAtack1");
                 Attack(_facingRight); 
                 yield return new WaitForSecondsRealtime(_attackInterval - (_attackInterval * 0.8f));

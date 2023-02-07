@@ -19,6 +19,11 @@ namespace Player
 
         private void Update()
         {
+            if (GameController.Instance.GameEnded)
+            {
+                return;
+            }
+            
             InputManagement();
         }
 

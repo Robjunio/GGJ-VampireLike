@@ -71,6 +71,11 @@ public class RotativeOrbeController : MonoBehaviour
     {
         while (true)
         {
+            if (GameController.Instance.GameEnded)
+            {
+                break;
+            }
+            
             Attack(_orbes);
             
             yield return new WaitForSecondsRealtime(5f);

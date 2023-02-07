@@ -52,6 +52,10 @@ public class RepulsiveShieldController : MonoBehaviour
     {
         while (true)
         {
+            if (GameController.Instance.GameEnded)
+            {
+                break;
+            }
             
             transform.GetChild(0).gameObject.SetActive(true);
             yield return new WaitForSecondsRealtime(0.75f);

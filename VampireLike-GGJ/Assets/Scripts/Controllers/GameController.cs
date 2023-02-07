@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private EnemySpawn _enemySpawn;
 
-    public bool GameEnded;
+    public bool GameEnded = false;
     public GameInterface Interface;
 
     private void Awake()

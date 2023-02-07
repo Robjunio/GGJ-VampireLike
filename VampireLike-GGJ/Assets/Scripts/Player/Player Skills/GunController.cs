@@ -52,6 +52,11 @@ public class GunController : MonoBehaviour
     {
         while (true)
         {
+            if (GameController.Instance.GameEnded)
+            {
+                break;
+            }
+            
             Attack(1); 
             yield return new WaitForSecondsRealtime(_attackInterval/bullets);
             if (_level >= 3)

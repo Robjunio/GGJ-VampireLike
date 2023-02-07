@@ -21,17 +21,25 @@ public class GameInterface : MonoBehaviour
     public void ActivateLevelUpPanel()
     {
         LevelUpPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void ActivateVictoryPanel()
     {
         GameController.Instance.GameEnded = true;
+        Time.timeScale = 0f;
         VictoryPanel.SetActive(true);
     }
 
     public void ActivateDefeatPanel()
     {
         GameController.Instance.GameEnded = true;
+        Time.timeScale = 0f;
         DefeatPanel.SetActive(true);
+    }
+
+    public void SetTimeScale(int value)
+    {
+        Time.timeScale = value;
     }
 }

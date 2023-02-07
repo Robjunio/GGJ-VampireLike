@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class GunBullet : MonoBehaviour
 {
+    [SerializeField] private Animator _animator;
     private int _damage;
 
     public void Awake()
@@ -21,12 +22,14 @@ public class GunBullet : MonoBehaviour
         switch (col.transform.tag)
         {
             case "Enemy":
+                _animator.Play("Bullet");
                 col.transform.GetComponent<EnemyStats>().TakeDamage(_damage);
-                Destroy(gameObject);
+                Destroy(gameObject, 0.3f);
                 break;
             case "Nodule":
+                _animator.Play("Bullet");
                 col.transform.GetComponent<NucleoHealth>().TakeDamage(_damage);
-                Destroy(gameObject);
+                Destroy(gameObject, 0.3f);
                 break;
         }
     }

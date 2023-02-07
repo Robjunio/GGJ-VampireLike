@@ -17,7 +17,7 @@ public class WhipController : MonoBehaviour
     {
         _level = 1;
         damage = 40;
-        _attackInterval = 3f;
+        _attackInterval = 2f;
 
         playerAtkAnim = playerAtkAnim.GetComponent<Animator>();
 

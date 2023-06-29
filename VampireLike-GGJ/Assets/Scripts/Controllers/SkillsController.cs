@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations;
 
@@ -12,11 +13,11 @@ public class SkillsController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI rotativeOrbeLvl;
     [SerializeField] private TextMeshProUGUI lightningLvl;
     [SerializeField] private TextMeshProUGUI shieldLvl;
-    private GameObject _playerSkills;
+    [SerializeField] private GameObject _playerSkills;
 
     private void Start()
     {
-        _playerSkills = GameObject.FindGameObjectWithTag("Player").gameObject.transform.GetChild(2).gameObject;
+        if (_playerSkills == null) _playerSkills = GameObject.FindGameObjectWithTag("Player").gameObject.transform.GetChild(2).gameObject;
     }
 
     public void LevelUpWhip()

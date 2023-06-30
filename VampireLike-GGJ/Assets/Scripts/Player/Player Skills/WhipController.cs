@@ -1,5 +1,6 @@
 using System.Collections;
 using Enemies;
+using Player;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -12,12 +13,23 @@ public class WhipController : MonoBehaviour
     private bool _facingRight = true;
 
     public Animator playerAtkAnim;
+    private bool playerIsAlive = true;
+    
+    void OnEnable()
+    {
+        PlayerStats.WhenPlayerDied += playerDied;
+    }
+
+    void OnDisable()
+    {
+        PlayerStats.WhenPlayerDied -= playerDied;
+    }
     
     private void Start()
     {
         _level = 1;
         damage = 40;
-        _attackInterval = 3f;
+        _attackInterval = 2f;
 
         playerAtkAnim = playerAtkAnim.GetComponent<Animator>();
 
@@ -29,6 +41,10 @@ public class WhipController : MonoBehaviour
 
     private void Update()
     {
+        if (!playerIsAlive)
+        {
+            return;
+        }
         // Update facing 
         if (Input.GetAxis("Horizontal") < 0) _facingRight = false;
         else if (Input.GetAxis("Horizontal") > 0) _facingRight = true;
@@ -60,6 +76,10 @@ public class WhipController : MonoBehaviour
     {
         while (true)
         {
+            if (!playerIsAlive)
+            {
+                break;
+            }
             playerAtkAnim.Play("PlayerAtack1");
                 Attack(_facingRight); 
                 yield return new WaitForSecondsRealtime(_attackInterval - (_attackInterval * 0.8f));
@@ -88,5 +108,9 @@ public class WhipController : MonoBehaviour
         }
     }
     
+    private void playerDied()
+    {
+        playerIsAlive = false;
+    }
 }
 

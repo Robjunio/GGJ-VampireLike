@@ -5,6 +5,10 @@ namespace Player
 {
     public class PlayerStats : MonoBehaviour
     {
+        // Death Event
+        public delegate void Death();
+        public static event Death WhenPlayerDied;
+        
         [HideInInspector] public float currentHealth;
         [HideInInspector] public float currentSpeed;
         [SerializeField] private float invincibilityDuration;
@@ -55,6 +59,7 @@ namespace Player
 
         private void Kill()
         {
+            WhenPlayerDied?.Invoke();
             _animator.Play("PlayerDeath");
             GameController.Instance.Interface.ActivateDefeatPanel();
         }

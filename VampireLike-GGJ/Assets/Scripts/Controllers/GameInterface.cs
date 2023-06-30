@@ -1,3 +1,6 @@
+using System;
+using BlockChain;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +12,15 @@ public class GameInterface : MonoBehaviour
     
     [SerializeField] private Slider _xpSlider;
     [SerializeField] private Text _levelInfo;
+
+    [SerializeField] private TextMeshProUGUI timerText;
+
+    [SerializeField] private TextMeshProUGUI EndResultTimer;
+    [SerializeField] private TextMeshProUGUI EndResultEnemiesKill;
+    [SerializeField] private TMP_InputField NameInput;
+
+    [SerializeField] private FadeCall _fadeCall;
+
     public void UpdateXpText()
     {
         var info = GameController.Instance.GetXpController().GetXpInfo();
@@ -21,17 +33,47 @@ public class GameInterface : MonoBehaviour
     public void ActivateLevelUpPanel()
     {
         LevelUpPanel.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void ActivateVictoryPanel()
     {
+        Time.timeScale = 0;
+        
+        var time = GameController.Instance.getRunTime();
+        var enemiesKill = GameController.Instance.getEnemiesKilled().ToString();
+
         GameController.Instance.GameEnded = true;
+        EndResultEnemiesKill.text = enemiesKill;
+        EndResultTimer.text = time;
+
         VictoryPanel.SetActive(true);
+    }
+
+    public void WinAddToHistoric()
+    {
+        var time = GameController.Instance.getRunTime();
+        var enemiesKill = GameController.Instance.getEnemiesKilled().ToString();
+        
+        if (NameInput.text != null)
+        {
+            ChainManager.Instance.AddNewRecord(NameInput.text + "|" + time  + "|" + enemiesKill);
+            _fadeCall.Fade("Menu");
+        }
     }
 
     public void ActivateDefeatPanel()
     {
+        if (GameController.Instance.GameEnded)
+        {
+            return;
+        }
         GameController.Instance.GameEnded = true;
         DefeatPanel.SetActive(true);
+    }
+
+    public void UpdateTimerUIText(string time)
+    {
+        timerText.text = time;
     }
 }

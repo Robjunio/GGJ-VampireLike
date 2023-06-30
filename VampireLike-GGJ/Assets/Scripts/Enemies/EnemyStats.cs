@@ -38,6 +38,7 @@ namespace Enemies
         {
             GameController.Instance.GetXpDrop().CreateXpOrbs(currentXpDropped, transform);
             GameController.Instance.GetEnemySpawn().RemoveEnemyFromList(gameObject);
+            GameController.Instance.EnemyKilled();
             Destroy(gameObject);
         }
 
@@ -49,7 +50,7 @@ namespace Enemies
                 player.TakeDamage(currentDamage);
                 enemyAnimator.SetBool("atk", true);
             }
-            //enemyAnimator.SetBool("atk", false);
+            enemyAnimator.SetBool("atk", false);
         }
     }
 }

@@ -76,4 +76,8 @@ public class SkillsController : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void OnDisable()
+    {
+        Time.timeScale = 1;
+    }
 }

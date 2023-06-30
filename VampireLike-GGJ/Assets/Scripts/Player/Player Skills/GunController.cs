@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -10,6 +11,23 @@ public class GunController : MonoBehaviour
     public int bullets;
     private float _attackInterval;
     private int _level;
+    private bool playerIsAlive = true;
+    
+    void OnEnable()
+    {
+        PlayerStats.WhenPlayerDied += playerDied;
+    }
+
+
+    void OnDisable()
+    {
+        PlayerStats.WhenPlayerDied -= playerDied;
+    }
+    
+    private void playerDied()
+    {
+        playerIsAlive = false;
+    }
     
     private void Start()
     {
@@ -52,6 +70,10 @@ public class GunController : MonoBehaviour
     {
         while (true)
         {
+            if (!playerIsAlive)
+            {
+                break;
+            }
             Attack(1); 
             yield return new WaitForSecondsRealtime(_attackInterval/bullets);
             if (_level >= 3)

@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lore.unity
     guid: d570ddc1ca695c14ebee1cb8a5dcaba0
+  - enabled: 1
+    path: Assets/Scenes/LeaderBoard.unity
+    guid: 4a22e97de790c7b48a9425241e2641ad
   m_configObjects: {}

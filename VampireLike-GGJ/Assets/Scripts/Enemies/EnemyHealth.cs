@@ -12,6 +12,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (_currentHP <= 0)
         {
+            GameController.Instance.EnemyKilled();
             GameController.Instance.GetXpDrop().CreateXpOrbs(qntXpDroped, transform);
             gameObject.GetComponent<Animator>().Play("enemy_death");
         }

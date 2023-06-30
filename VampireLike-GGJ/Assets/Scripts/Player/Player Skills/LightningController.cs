@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
@@ -14,6 +15,23 @@ public class LightningController : MonoBehaviour
     private float _attackInterval;
     private int _level;
     private bool _isFirstIteration = true;
+    private bool playerIsAlive = true;
+    
+    void OnEnable()
+    {
+        PlayerStats.WhenPlayerDied += playerDied;
+    }
+
+
+    void OnDisable()
+    {
+        PlayerStats.WhenPlayerDied -= playerDied;
+    }
+    
+    private void playerDied()
+    {
+        playerIsAlive = false;
+    }
     
     private void Start()
     {
@@ -58,7 +76,10 @@ public class LightningController : MonoBehaviour
     {
         while (true)
         {
-            
+            if (!playerIsAlive)
+            {
+                break;
+            }
             if (_isFirstIteration) yield return new WaitForSecondsRealtime(3f);
             else{
                 Attack(1); 

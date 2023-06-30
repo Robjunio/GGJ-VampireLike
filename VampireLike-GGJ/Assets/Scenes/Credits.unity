@@ -183,7 +183,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: a51a3aebb43ac044989270407476b208, type: 3}
-    m_FontSize: 22
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -194,11 +194,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Eduardo Jorge @eduardojlira\nNatan Santos @natan-si-santos\nRoberto Junio
-    @Robjunio\nEryka Cristine @Erykacris_\nRaphael Cavalcante in/cavalcante-designer\nGuilherme
-    Luz @guilherme-luz\nLa\xEDs Dib @laisdib\nGustavo Fadel @gustavo-fade\n\n\"Unholy
-    Knight\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By
-    Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+  m_Text: "Roberto Junio @Robjunio\nGustavo Fadel @gustavo-fade\nLeandro Santiado
+    @\nEduardo Jorge @eduardojlira\nNatan Santos @natan-si-santos\nEryka Cristine
+    @Erykacris_\nRaphael Cavalcante in/cavalcante-designer\nGuilherme Luz @guilherme-luz\nLa\xEDs
+    Dib @laisdib\n\n\"Unholy Knight\" Kevin MacLeod (incompetech.com)\nLicensed under
+    Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
 --- !u!222 &128802873
 CanvasRenderer:
   m_ObjectHideFlags: 0

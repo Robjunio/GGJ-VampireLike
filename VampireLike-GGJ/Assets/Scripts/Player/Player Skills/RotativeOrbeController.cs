@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -13,7 +14,23 @@ public class RotativeOrbeController : MonoBehaviour
     private int _level;
     private float _attackInterval;
     private int _orbes;
+    private bool playerIsAlive = true;
+    
+    void OnEnable()
+    {
+        PlayerStats.WhenPlayerDied += playerDied;
+    }
 
+
+    void OnDisable()
+    {
+        PlayerStats.WhenPlayerDied -= playerDied;
+    }
+    
+    private void playerDied()
+    {
+        playerIsAlive = false;
+    }
     
     private void Start()
     {
@@ -53,7 +70,10 @@ public class RotativeOrbeController : MonoBehaviour
     }
 
     void Update() {
-        
+        if (!playerIsAlive)
+        {
+            return;
+        }
         float angle = Time.time * _speed;
         Vector3 newPos1 = new Vector3(Mathf.Cos(angle) * Radius, Mathf.Sin(angle) * Radius, 0);
         Vector3 newPos2 = new Vector3(Mathf.Cos(angle + 90f) * Radius, Mathf.Sin(angle + 90f) * Radius, 0);
@@ -71,6 +91,11 @@ public class RotativeOrbeController : MonoBehaviour
     {
         while (true)
         {
+            if (!playerIsAlive)
+            {
+                break;
+            }
+            
             Attack(_orbes);
             
             yield return new WaitForSecondsRealtime(5f);

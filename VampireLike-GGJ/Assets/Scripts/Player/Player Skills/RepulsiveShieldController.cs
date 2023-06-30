@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Enemies;
+using Player;
 using UnityEngine;
 
 public class RepulsiveShieldController : MonoBehaviour
@@ -9,6 +10,23 @@ public class RepulsiveShieldController : MonoBehaviour
     public float pushForce;
     private float _attackInterval;
     private int _level;
+    private bool playerIsAlive = true;
+    
+    void OnEnable()
+    {
+        PlayerStats.WhenPlayerDied += playerDied;
+    }
+
+
+    void OnDisable()
+    {
+        PlayerStats.WhenPlayerDied -= playerDied;
+    }
+    
+    private void playerDied()
+    {
+        playerIsAlive = false;
+    }
     
     private void Start()
     {
@@ -52,7 +70,10 @@ public class RepulsiveShieldController : MonoBehaviour
     {
         while (true)
         {
-            
+            if (!playerIsAlive)
+            {
+                break;
+            }
             transform.GetChild(0).gameObject.SetActive(true);
             yield return new WaitForSecondsRealtime(0.75f);
             transform.GetChild(0).gameObject.SetActive(false);

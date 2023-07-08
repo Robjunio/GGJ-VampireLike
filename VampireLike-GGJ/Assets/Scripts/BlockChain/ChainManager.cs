@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace BlockChain
@@ -6,47 +7,66 @@ namespace BlockChain
     public class ChainManager : MonoBehaviour
     {
         public static ChainManager Instance;
-        private Blockchain BloodChain;
-        private void Awake()
+        private Blockchain _bloodChain;
+
+        private async void Awake()
         {
             if (FindObjectsOfType<ChainManager>().Length > 1)
             {
-                // This avoid the creation of multiple instances of this same game object.
                 Destroy(gameObject);
             }
             else
             {
-                // Make this object persist between scenes.
                 DontDestroyOnLoad(gameObject);
                 
-                // Creation of the chain.
-                BloodChain = new Blockchain(1);
+                _bloodChain = new Blockchain(1);
                 Instance = this;
             }
+
+            await InitializeAsync();
         }
 
-        public void AddNewRecord(string Data)
+        private async Task InitializeAsync()
         {
-            if (BloodChain.IsValidChain())
+            await Task.Delay(1000);
+
+            // TODO
+        }
+
+        public async void AddNewRecord(string data)
+        {
+            if (_bloodChain.IsValidChain())
             {
-                BloodChain.AddNewBlock(Data);
+                await AddNewBlockAsync(data);
             }
-            debug();
+
+            await DebugAsync();
         }
 
-        public Blockchain getChain()
+        private async Task AddNewBlockAsync(string data)
         {
-            return BloodChain;
+            await Task.Delay(1000);
+
+            _bloodChain.AddNewBlock(data);
         }
 
-        private void debug()
+        public Blockchain GetChain()
         {
-            var count = BloodChain.Chain.Count;
-            print(count);
+            return _bloodChain;
+        }
+
+        private async Task DebugAsync()
+        {
+            await Task.Delay(1000);
+
+            var count = _bloodChain.Chain.Count;
+            Debug.Log(count);
+            
             for (int i = 0; i < count; i++)
             {
-                print(BloodChain.Chain[i].getData());
+                Debug.Log(_bloodChain.Chain[i].getData());
             }
+            
         }
     }
 }

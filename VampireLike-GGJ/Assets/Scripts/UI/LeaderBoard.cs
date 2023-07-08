@@ -12,7 +12,7 @@ public class LeaderBoard : MonoBehaviour
 
     private void Start()
     {
-        var chain = ChainManager.Instance.getChain();
+        var chain = ChainManager.Instance.GetChain();
 
         if (chain.IsValidChain())
         {

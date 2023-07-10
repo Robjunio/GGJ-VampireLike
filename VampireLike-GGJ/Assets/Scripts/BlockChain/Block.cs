@@ -1,13 +1,13 @@
 using System;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace BlockChain
 {
     public class Block: MonoBehaviour
     {
-        // Block position in Blockchain
         private int _index;
         // Date and time that the block has been created
         private DateTime _timestamp;
@@ -53,18 +53,23 @@ namespace BlockChain
             return _index + _timestamp.ToString() + _previousHash + _data + _nonce;
         }
 
-        public void MineBlock(int proofOfWorkDifficulty)
+        public async Task MineBlockAsync(int proofOfWorkDifficulty)
         {
             string hashValidationTemplate = new String('0', proofOfWorkDifficulty);
-            
+
             while (_hash.Substring(0, proofOfWorkDifficulty) != hashValidationTemplate)
             {
                 _nonce++;
                 _hash = CreateHash();
-                // print(_hash);
+                Debug.Log(_hash + " " + _nonce);
+                await Task.Yield(); // Aguarda uma pausa no processamento assíncrono
             }
-            Console.WriteLine("Blocked with HASH={0} successfully mined!", _hash);
+
+            // Debug.Log(_hash + " " + _nonce);
+            FindObjectOfType<ChainManager>().DisablePickaxe();
+            Debug.Log("Bloco com HASH minerado com sucesso! ->" +  _hash);
         }
+
 
         public string CreateHash()
         {
@@ -75,5 +80,6 @@ namespace BlockChain
                 return Encoding.Default.GetString(bytes);
             } 
         }
+        
     }
 }

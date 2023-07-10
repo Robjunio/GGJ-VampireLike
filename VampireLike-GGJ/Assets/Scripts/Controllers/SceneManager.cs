@@ -9,8 +9,9 @@ public class SceneManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
     }
 
-    public static void LoadScene(string lvlName)
+    public void LoadScene(string lvlName)
     {
-        throw new System.NotImplementedException();
+        // throw new System.NotImplementedException();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(lvlName);
     }
 }

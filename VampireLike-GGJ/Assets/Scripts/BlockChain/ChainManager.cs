@@ -9,6 +9,8 @@ namespace BlockChain
         public static ChainManager Instance;
         private Blockchain _bloodChain;
 
+        [SerializeField] private GameObject pickaxe;
+
         private async void Awake()
         {
             if (FindObjectsOfType<ChainManager>().Length > 1)
@@ -19,7 +21,6 @@ namespace BlockChain
             {
                 DontDestroyOnLoad(gameObject);
                 
-                _bloodChain = new Blockchain(1);
                 Instance = this;
             }
 
@@ -30,13 +31,16 @@ namespace BlockChain
         {
             await Task.Delay(1000);
 
-            // TODO
+            _bloodChain = new Blockchain(1);
         }
 
         public async void AddNewRecord(string data)
         {
             if (_bloodChain.IsValidChain())
             {
+                Debug.Log("Adicionando um novo Bloco na cadeia!");
+                EnablePickaxe();
+                GameObject.FindObjectOfType<SceneManager>().LoadScene("Menu");
                 await AddNewBlockAsync(data);
             }
 
@@ -47,7 +51,7 @@ namespace BlockChain
         {
             await Task.Delay(1000);
 
-            _bloodChain.AddNewBlock(data);
+            await _bloodChain.AddNewBlockAsync(data);
         }
 
         public Blockchain GetChain()
@@ -60,13 +64,23 @@ namespace BlockChain
             await Task.Delay(1000);
 
             var count = _bloodChain.Chain.Count;
-            // Debug.Log(count);
+            Debug.Log(count); // Number of blocks in the chain
             
             for (int i = 0; i < count; i++)
             {
-                Debug.Log(_bloodChain.Chain[i].getData());
+                Debug.Log(_bloodChain.Chain[i].getData()); // Print all blocks data
             }
-            
         }
+        
+        public void EnablePickaxe()
+        {
+            pickaxe.SetActive(true);
+        }
+
+        public void DisablePickaxe()
+        {
+            pickaxe.SetActive(false);
+        }
+
     }
 }

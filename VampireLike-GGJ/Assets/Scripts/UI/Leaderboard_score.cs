@@ -12,7 +12,7 @@ public class Leaderboard_score : MonoBehaviour
     public void setScore(string name, string time, string kills)
     {
         nameUI.text = name;
-        killsUI.text = kills;
-        timeUI.text = time;
+        killsUI.text = "Kills: " + kills;
+        timeUI.text = "Time: " + time;
     }
 }

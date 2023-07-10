@@ -58,7 +58,6 @@ public class GameInterface : MonoBehaviour
         if (NameInput.text != null)
         {
             ChainManager.Instance.AddNewRecord(NameInput.text + " | " + time  + " | " + enemiesKill);
-            _fadeCall.Fade("Menu");
         }
     }
 

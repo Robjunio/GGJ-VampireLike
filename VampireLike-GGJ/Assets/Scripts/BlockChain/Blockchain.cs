@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace BlockChain
 {
@@ -13,17 +14,18 @@ namespace BlockChain
         {
             _proofOfWorkDifficulty = proofOfWorkDifficulty;
             var genesis = CreateGenesisBlock();
-            genesis.MineBlock(_proofOfWorkDifficulty);
+            genesis.MineBlockAsync(_proofOfWorkDifficulty);
             Chain = new List<Block> {genesis};
         }
-        public void AddNewBlock(string data)
+
+        public async Task AddNewBlockAsync(string data)
         {
-            //int index, long timestamp, string previousHash, string data
             var lastBlock = getLastBlock();
             Block block = new Block(lastBlock.getIndex() + 1, DateTime.Now, lastBlock.getHash(), data);
-            block.MineBlock(_proofOfWorkDifficulty);
+            await block.MineBlockAsync(_proofOfWorkDifficulty);
             Chain.Add(block);
         }
+        
         public bool IsValidChain()
         {
             for (int i = 1; i < Chain.Count; i++)

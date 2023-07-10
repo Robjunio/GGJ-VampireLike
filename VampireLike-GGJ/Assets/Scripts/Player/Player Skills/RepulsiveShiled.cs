@@ -11,7 +11,7 @@ public class RepulsiveShiled : MonoBehaviour
 
     private void OnEnable()
     {
-        _damage = GetComponentInParent<RepulsiveShieldController>().damage;
+        _damage = 1000;
         _pushForce = GetComponentInParent<RepulsiveShieldController>().pushForce;
     }
 

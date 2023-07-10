@@ -61,7 +61,7 @@ namespace BlockChain
             {
                 _nonce++;
                 _hash = CreateHash();
-                print(_hash);
+                // print(_hash);
             }
             Console.WriteLine("Blocked with HASH={0} successfully mined!", _hash);
         }

@@ -60,7 +60,7 @@ namespace BlockChain
             await Task.Delay(1000);
 
             var count = _bloodChain.Chain.Count;
-            Debug.Log(count);
+            // Debug.Log(count);
             
             for (int i = 0; i < count; i++)
             {

@@ -37,6 +37,6 @@ public class NucleoHealth : MonoBehaviour
 
     private void OnDestroy()
     {
-        print("Removeu");
+        // print("Removeu");
     }
 }

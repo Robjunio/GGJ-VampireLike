@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour
         _xpController.Start();
         
         var time = DateTime.Now.ToShortTimeString();
-        print(time);
+        // print(time);
     }
     
     private void Update()

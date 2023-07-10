@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 
 namespace BlockChain
@@ -8,7 +9,7 @@ namespace BlockChain
     {
         public static ChainManager Instance;
         private Blockchain _bloodChain;
-
+        
         [SerializeField] private GameObject pickaxe;
 
         private async void Awake()
@@ -31,7 +32,7 @@ namespace BlockChain
         {
             await Task.Delay(1000);
 
-            _bloodChain = new Blockchain(1);
+            _bloodChain = new Blockchain(2);
         }
 
         public async void AddNewRecord(string data)
@@ -81,6 +82,5 @@ namespace BlockChain
         {
             pickaxe.SetActive(false);
         }
-
     }
 }

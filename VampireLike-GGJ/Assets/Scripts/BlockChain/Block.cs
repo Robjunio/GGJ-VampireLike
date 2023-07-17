@@ -61,13 +61,13 @@ namespace BlockChain
             {
                 _nonce++;
                 _hash = CreateHash();
-                Debug.Log(_hash + " " + _nonce);
+                Debug.Log(_hash + " Nonce -> " + _nonce);
                 await Task.Yield(); // Aguarda uma pausa no processamento assíncrono
             }
 
             // Debug.Log(_hash + " " + _nonce);
             FindObjectOfType<ChainManager>().DisablePickaxe();
-            Debug.Log("Bloco com HASH minerado com sucesso! ->" +  _hash);
+            Debug.Log("Bloco com HASH minerado com sucesso! -> " +  _hash + " / Proof -> " + proofOfWorkDifficulty);
         }
 
 

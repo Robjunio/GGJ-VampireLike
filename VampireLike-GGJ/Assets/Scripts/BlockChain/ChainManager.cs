@@ -32,7 +32,7 @@ namespace BlockChain
         {
             await Task.Delay(1000);
 
-            _bloodChain = new Blockchain(2);
+            _bloodChain = new Blockchain(1);
         }
 
         public async void AddNewRecord(string data)
@@ -65,7 +65,7 @@ namespace BlockChain
             await Task.Delay(1000);
 
             var count = _bloodChain.Chain.Count;
-            Debug.Log(count); // Number of blocks in the chain
+            Debug.Log("Numero de Blocos na Cadeia: " + count); // Number of blocks in the chain
             
             for (int i = 0; i < count; i++)
             {

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ProjectConfigData
   m_EditorClassIdentifier: 
   projectID: 72bc64af-3f13-4a7d-a334-f4813534ecc4
-  chainID: 10989
-  chain: Goerli
+  chainID: 5
+  chain: goerli
   network: Ethereum
-  rpc: https://rpc.buildbear.io/greasy-dooku-23a722f7
+  rpc: https://rpc.ankr.com/eth_goerli

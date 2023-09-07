@@ -721,7 +721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.23822121}
   m_AnchorMax: {x: 0.5, y: 0.23822121}
-  m_AnchoredPosition: {x: -1.59, y: -0.0000076294}
+  m_AnchoredPosition: {x: -1.59, y: -0.000015258789}
   m_SizeDelta: {x: 316.7887, y: 59.3979}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &997845916
@@ -767,7 +767,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 997845917}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1447638480}
+        m_TargetAssemblyTypeName: WalletLogin, Assembly-CSharp
+        m_MethodName: OnLogin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &997845917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -962,6 +974,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360534624}
   m_CullTransparentMesh: 1
+--- !u!1 &1447638479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1447638481}
+  - component: {fileID: 1447638480}
+  m_Layer: 0
+  m_Name: Blockchain - Login
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1447638480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447638479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52913904a0404486cbc6143d85432c7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rememberMe: {fileID: 252583807}
+--- !u!4 &1447638481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447638479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1708912405
 GameObject:
   m_ObjectHideFlags: 0

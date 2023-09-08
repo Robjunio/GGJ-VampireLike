@@ -52,13 +52,13 @@ public class GameInterface : MonoBehaviour
 
     public void WinAddToHistoric()
     {
-        var time = GameController.Instance.getRunTime();
-        var enemiesKill = GameController.Instance.getEnemiesKilled().ToString();
-        
-        if (NameInput.text != null)
-        {
-            ChainManager.Instance.AddNewRecord(NameInput.text + " | " + time  + " | " + enemiesKill);
-        }
+        // var time = GameController.Instance.getRunTime();
+        // var enemiesKill = GameController.Instance.getEnemiesKilled().ToString();
+        //
+        // if (NameInput.text != null)
+        // {
+        //     ChainManager.Instance.AddNewRecord(NameInput.text + " | " + time  + " | " + enemiesKill);
+        // }
     }
 
     public void ActivateDefeatPanel()

@@ -85,4 +85,9 @@ public class GameController : MonoBehaviour
     {
         return EnemyKills;
     }
+
+    public float ReturnTimer()
+    {
+        return currentTime;
+    }
 }

@@ -28,6 +28,8 @@ public class SkillsController : MonoBehaviour
         
         gameObject.SetActive(false);
         
+        DataManager.Instance.InsertGameSkills(ReturnSkillsLevel());
+        
     }
     
     public void LevelUpGun()
@@ -39,6 +41,8 @@ public class SkillsController : MonoBehaviour
         gunLvl.text = (int.Parse(gunLvl.text) + 1).ToString();     
         
         gameObject.SetActive(false);
+        
+        DataManager.Instance.InsertGameSkills(ReturnSkillsLevel());
 
     }    
     
@@ -51,6 +55,8 @@ public class SkillsController : MonoBehaviour
         rotativeOrbeLvl.text = (int.Parse(rotativeOrbeLvl.text) + 1).ToString();     
 
         gameObject.SetActive(false);
+        
+        DataManager.Instance.InsertGameSkills(ReturnSkillsLevel());
 
     }    
     
@@ -63,6 +69,8 @@ public class SkillsController : MonoBehaviour
         lightningLvl.text = (int.Parse(lightningLvl.text) + 1).ToString();     
 
         gameObject.SetActive(false);
+        
+        DataManager.Instance.InsertGameSkills(ReturnSkillsLevel());
     }    
     
     public void LevelUpShield()
@@ -74,10 +82,18 @@ public class SkillsController : MonoBehaviour
         shieldLvl.text = (int.Parse(shieldLvl.text) + 1).ToString();     
 
         gameObject.SetActive(false);
+        
+        DataManager.Instance.InsertGameSkills(ReturnSkillsLevel());
     }
 
     private void OnDisable()
     {
         Time.timeScale = 1;
     }
+
+    public string ReturnSkillsLevel()
+    {
+        return "Whip: " + whipLvl.text + " Stardust: " + gunLvl.text + " Fire-Fable: " + rotativeOrbeLvl.text + " Lightning: " + lightningLvl.text + " Barrier: " + shieldLvl.text;
+    }
+    
 }

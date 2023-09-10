@@ -42,5 +42,19 @@ public class DataManager : MonoBehaviour
         gameSkills = skills;
         Debug.Log(gameSkills);
     }
+
+    public string getPlayerName()
+    {
+        return playerName;
+    }
     
+    public float getGameScore()
+    {
+        return gameScore;
+    }
+    
+    public string getGameSkills()
+    {
+        return gameSkills;
+    }
 }

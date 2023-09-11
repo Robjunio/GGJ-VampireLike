@@ -10,7 +10,7 @@ public class Leaderboard_score : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nameUI;
     [SerializeField] private TextMeshProUGUI pointsUI;
     [SerializeField] private GameObject BuyPanel;
-    private GameObject Panel;
+    private GameObject buyPanelÓbject;
     [SerializeField] private Button _button;
     private int _id;
 
@@ -25,21 +25,29 @@ public class Leaderboard_score : MonoBehaviour
 
     private async void CreatePanel()
     {
-        if (Panel == null)
+        Record recordInfo = await BCInteract.Instance.GetRecord(_id);
+        List<string> addressPermited = await BCInteract.Instance.GetAddressPermited(_id);
+        string userAddress = PlayerPrefs.GetString("Account");
+
+        if (userAddress != recordInfo.owner && !addressPermited.Contains(userAddress))
         {
-            GameObject canvas = GameObject.Find("Canvas");
-            
-            Panel = Instantiate(BuyPanel, canvas.transform);
-            var recordInfo = await BCInteract.Instance.GetRecord(_id);
-            var panel = Panel.transform.GetChild(0).GetComponent<BuyRecordPanel>();
-            panel.StartPanel(recordInfo[2].ToString(), recordInfo[1].ToString(), _id);
-            
+            if (!buyPanelÓbject)
+            {
+                GameObject canvas = GameObject.Find("Canvas");
+                buyPanelÓbject = Instantiate(BuyPanel, canvas.transform);
+                var buyPanel = buyPanelÓbject.transform.GetChild(0).GetComponent<BuyRecordPanel>();
+                buyPanel.StartPanel(recordInfo.ownerName, recordInfo.owner, recordInfo.id);
+            }
+            else
+            {
+                buyPanelÓbject.SetActive(true);
+            }
         }
+
         else
         {
-            Panel.SetActive(true);
+            Debug.Log("Tenho acesso");
         }
-        
     }
 
     public int GetId()

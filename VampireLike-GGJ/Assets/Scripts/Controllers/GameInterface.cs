@@ -2,6 +2,7 @@ using System;
 using BlockChain;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameInterface : MonoBehaviour
@@ -48,17 +49,6 @@ public class GameInterface : MonoBehaviour
         EndResultTimer.text = time;
 
         VictoryPanel.SetActive(true);
-    }
-
-    public void WinAddToHistoric()
-    {
-        // var time = GameController.Instance.getRunTime();
-        // var enemiesKill = GameController.Instance.getEnemiesKilled().ToString();
-        //
-        // if (NameInput.text != null)
-        // {
-        //     ChainManager.Instance.AddNewRecord(NameInput.text + " | " + time  + " | " + enemiesKill);
-        // }
     }
 
     public void ActivateDefeatPanel()

@@ -21,8 +21,6 @@ namespace UI
         private async void AskForAcess()
         {
             await BCInteract.Instance.GetAcess(id);
-        }
-        
-        
+        } 
     }
 }

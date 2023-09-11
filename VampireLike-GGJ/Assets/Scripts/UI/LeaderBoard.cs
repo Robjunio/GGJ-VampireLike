@@ -37,7 +37,7 @@ public class LeaderBoard : MonoBehaviour
                 var recordInfo = await BCInteract.Instance.GetRecord(i);
                 
                 var score = Instantiate(scorePrefab, leaderboardPositionTransform);
-                score.GetComponent<Leaderboard_score>().setScore(recordInfo[2].ToString(), recordInfo[3].ToString(), i);
+                score.GetComponent<Leaderboard_score>().setScore(recordInfo.ownerName, recordInfo.points.ToString(), i);
             }
         }
     }

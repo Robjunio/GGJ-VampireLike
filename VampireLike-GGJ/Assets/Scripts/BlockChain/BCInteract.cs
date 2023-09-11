@@ -34,11 +34,10 @@ public class BCInteract : MonoBehaviour
         try
         {
             chainId = "5";
-            abi =
-                "[ 	{ 		\"inputs\": [ 			{ 				\"internalType\": \"uint256\", 				\"name\": \"recordId\", 				\"type\": \"uint256\" 			} 		], 		\"name\": \"AcessInfo\", 		\"outputs\": [], 		\"stateMutability\": \"nonpayable\", 		\"type\": \"function\" 	}, 	{ 		\"anonymous\": false, 		\"inputs\": [ 			{ 				\"indexed\": false, 				\"internalType\": \"uint256\", 				\"name\": \"id\", 				\"type\": \"uint256\" 			}, 			{ 				\"indexed\": false, 				\"internalType\": \"string\", 				\"name\": \"name\", 				\"type\": \"string\" 			}, 			{ 				\"indexed\": false, 				\"internalType\": \"uint256\", 				\"name\": \"points\", 				\"type\": \"uint256\" 			} 		], 		\"name\": \"RecordRegistered\", 		\"type\": \"event\" 	}, 	{ 		\"inputs\": [], 		\"name\": \"registerPlayer\", 		\"outputs\": [], 		\"stateMutability\": \"nonpayable\", 		\"type\": \"function\" 	}, 	{ 		\"inputs\": [ 			{ 				\"internalType\": \"string\", 				\"name\": \"name\", 				\"type\": \"string\" 			}, 			{ 				\"internalType\": \"uint256\", 				\"name\": \"points\", 				\"type\": \"uint256\" 			}, 			{ 				\"internalType\": \"string\", 				\"name\": \"timeSpend\", 				\"type\": \"string\" 			}, 			{ 				\"internalType\": \"uint256\", 				\"name\": \"enemysKilled\", 				\"type\": \"uint256\" 			}, 			{ 				\"internalType\": \"string\", 				\"name\": \"abilityPlayerHas\", 				\"type\": \"string\" 			}, 			{ 				\"internalType\": \"address[]\", 				\"name\": \"adresses\", 				\"type\": \"address[]\" 			} 		], 		\"name\": \"registerRecord\", 		\"outputs\": [], 		\"stateMutability\": \"nonpayable\", 		\"type\": \"function\" 	}, 	{ 		\"inputs\": [ 			{ 				\"internalType\": \"uint256\", 				\"name\": \"\", 				\"type\": \"uint256\" 			} 		], 		\"name\": \"Records\", 		\"outputs\": [ 			{ 				\"internalType\": \"uint256\", 				\"name\": \"id\", 				\"type\": \"uint256\" 			}, 			{ 				\"internalType\": \"address\", 				\"name\": \"owner\", 				\"type\": \"address\" 			}, 			{ 				\"internalType\": \"string\", 				\"name\": \"ownerName\", 				\"type\": \"string\" 			}, 			{ 				\"internalType\": \"uint256\", 				\"name\": \"points\", 				\"type\": \"uint256\" 			}, 			{ 				\"internalType\": \"string\", 				\"name\": \"timeSpend\", 				\"type\": \"string\" 			}, 			{ 				\"internalType\": \"uint256\", 				\"name\": \"enemysKilled\", 				\"type\": \"uint256\" 			}, 			{ 				\"internalType\": \"string\", 				\"name\": \"habilityList\", 				\"type\": \"string\" 			} 		], 		\"stateMutability\": \"view\", 		\"type\": \"function\" 	}, 	{ 		\"inputs\": [ 			{ 				\"internalType\": \"address\", 				\"name\": \"\", 				\"type\": \"address\" 			} 		], 		\"name\": \"registeredPlayers\", 		\"outputs\": [ 			{ 				\"internalType\": \"bool\", 				\"name\": \"\", 				\"type\": \"bool\" 			} 		], 		\"stateMutability\": \"view\", 		\"type\": \"function\" 	}, 	{ 		\"inputs\": [], 		\"name\": \"totalRecords\", 		\"outputs\": [ 			{ 				\"internalType\": \"uint256\", 				\"name\": \"\", 				\"type\": \"uint256\" 			} 		], 		\"stateMutability\": \"view\", 		\"type\": \"function\" 	} ]";
+            abi = "[ { \"anonymous\": false, \"inputs\": [ { \"indexed\": false, \"internalType\": \"uint256\", \"name\": \"id\", \"type\": \"uint256\" }, { \"indexed\": false, \"internalType\": \"string\", \"name\": \"name\", \"type\": \"string\" }, { \"indexed\": false, \"internalType\": \"uint256\", \"name\": \"points\", \"type\": \"uint256\" } ], \"name\": \"RecordRegistered\", \"type\": \"event\" }, { \"inputs\": [ { \"internalType\": \"uint256\", \"name\": \"recordId\", \"type\": \"uint256\" } ], \"name\": \"AcessInfo\", \"outputs\": [], \"stateMutability\": \"nonpayable\", \"type\": \"function\" }, { \"inputs\": [ { \"internalType\": \"uint256\", \"name\": \"\", \"type\": \"uint256\" } ], \"name\": \"Records\", \"outputs\": [ { \"internalType\": \"uint256\", \"name\": \"id\", \"type\": \"uint256\" }, { \"internalType\": \"address\", \"name\": \"owner\", \"type\": \"address\" }, { \"internalType\": \"string\", \"name\": \"ownerName\", \"type\": \"string\" }, { \"internalType\": \"uint256\", \"name\": \"points\", \"type\": \"uint256\" }, { \"internalType\": \"string\", \"name\": \"timeSpend\", \"type\": \"string\" }, { \"internalType\": \"uint256\", \"name\": \"enemysKilled\", \"type\": \"uint256\" }, { \"internalType\": \"string\", \"name\": \"habilityList\", \"type\": \"string\" } ], \"stateMutability\": \"view\", \"type\": \"function\" }, { \"inputs\": [ { \"internalType\": \"uint256\", \"name\": \"recordId\", \"type\": \"uint256\" } ], \"name\": \"getAddressPermited\", \"outputs\": [ { \"internalType\": \"address[]\", \"name\": \"\", \"type\": \"address[]\" } ], \"stateMutability\": \"view\", \"type\": \"function\" }, { \"inputs\": [], \"name\": \"registerPlayer\", \"outputs\": [], \"stateMutability\": \"nonpayable\", \"type\": \"function\" }, { \"inputs\": [ { \"internalType\": \"string\", \"name\": \"name\", \"type\": \"string\" }, { \"internalType\": \"uint256\", \"name\": \"points\", \"type\": \"uint256\" }, { \"internalType\": \"string\", \"name\": \"timeSpend\", \"type\": \"string\" }, { \"internalType\": \"uint256\", \"name\": \"enemysKilled\", \"type\": \"uint256\" }, { \"internalType\": \"string\", \"name\": \"abilityPlayerHas\", \"type\": \"string\" }, { \"internalType\": \"address[]\", \"name\": \"adresses\", \"type\": \"address[]\" } ], \"name\": \"registerRecord\", \"outputs\": [], \"stateMutability\": \"nonpayable\", \"type\": \"function\" }, { \"inputs\": [ { \"internalType\": \"address\", \"name\": \"\", \"type\": \"address\" } ], \"name\": \"registeredPlayers\", \"outputs\": [ { \"internalType\": \"bool\", \"name\": \"\", \"type\": \"bool\" } ], \"stateMutability\": \"view\", \"type\": \"function\" }, { \"inputs\": [], \"name\": \"totalRecords\", \"outputs\": [ { \"internalType\": \"uint256\", \"name\": \"\", \"type\": \"uint256\" } ], \"stateMutability\": \"view\", \"type\": \"function\" } ]";
             
             // address of contract
-            contractAddress = "0x6822f7D79756CbC20E236865C5484F1130489300";
+            contractAddress = "0xA220cC0dA4026C3610190391d35BadbcE9393458";
             
             // you can use this to create a provider for hardcoding and parse this instead of rpc get instance
             provider = new JsonRpcProvider("https://rpc.ankr.com/eth_goerli");
@@ -56,10 +55,7 @@ public class BCInteract : MonoBehaviour
             if (!playerRegister)
             {
                 // send transaction
-                string response = await Web3Wallet.SendTransaction(chainId, contractAddress, "0", calldata, "", "");
-            
-                // display response in game
-                print("Please check the contract variable again in a few seconds once the chain has processed the request!");
+                await Web3Wallet.SendTransaction(chainId, contractAddress, "0", calldata, "", "");
             }
         }
         catch (Exception e)
@@ -84,11 +80,7 @@ public class BCInteract : MonoBehaviour
                 new List<String>()
             });
             
-            Debug.Log("Data: " + data);
-
-            string response = await Web3Wallet.SendTransaction(chainId, contractAddress, "0", data, "", "");
-
-            Debug.Log("Resposta do RegisterPlayerSkills:\n\n" + response);
+            await Web3Wallet.SendTransaction(chainId, contractAddress, "0", data, "", "");
         }
         
         catch (Exception e)
@@ -136,8 +128,28 @@ public class BCInteract : MonoBehaviour
 
         return 0;
     }
+    
+    public async Task<List<string>> GetAddressPermited(int id)
+    {
+        string method = "getAddressPermited";
+        try
+        {
+            var response = await contract.Call(method, new object[]
+            {
+                id
+            });
 
-    public async Task<object[]> GetRecord(int id)
+            return (List<string>) response[0];
+        }
+        catch (Exception e)
+        {
+            print(e);
+        }
+
+        return null;
+    }
+
+    public async Task<Record> GetRecord(int id)
     {
         string method = "Records";
         try
@@ -147,7 +159,7 @@ public class BCInteract : MonoBehaviour
                 id
             });
 
-            return response;
+            return new Record(response);
         }
         catch (Exception e)
         {
@@ -167,7 +179,7 @@ public class BCInteract : MonoBehaviour
                 id
             });
 
-            string response = await Web3Wallet.SendTransaction(chainId, contractAddress, "0", data, "", "");
+            await Web3Wallet.SendTransaction(chainId, contractAddress, "0", data, "", "");
         }
         catch (Exception e)
         {

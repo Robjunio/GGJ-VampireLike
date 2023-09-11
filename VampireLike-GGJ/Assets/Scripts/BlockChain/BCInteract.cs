@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using Web3Unity.Scripts.Library.ETHEREUEM.Connect;
 using Web3Unity.Scripts.Library.Ethers.Contracts;
@@ -50,11 +51,16 @@ public class BCInteract : MonoBehaviour
 
             var calldata = contract.Calldata(method, new object[] { });
 
-            // send transaction
-            string response = await Web3Wallet.SendTransaction(chainId, contractAddress, "0", calldata, "", "");
+            bool playerRegister = await GetPlayerRegister();
+
+            if (!playerRegister)
+            {
+                // send transaction
+                string response = await Web3Wallet.SendTransaction(chainId, contractAddress, "0", calldata, "", "");
             
-            // display response in game
-            print("Please check the contract variable again in a few seconds once the chain has processed the request!");
+                // display response in game
+                print("Please check the contract variable again in a few seconds once the chain has processed the request!");
+            }
         }
         catch (Exception e)
         {
@@ -62,7 +68,7 @@ public class BCInteract : MonoBehaviour
         }
     }
 
-    public async void RegisterPlayerSkills(string playerName, int points, string playerSkills, string timeSpent = "60", int enemiesKilled = 10)
+    public async void RegisterPlayerSkills(string playerName, int points, string playerSkills, string timeSpent , int enemiesKilled)
     {
         string method = "registerRecord";
 
@@ -89,5 +95,88 @@ public class BCInteract : MonoBehaviour
         {
             print(e);
         }
+    }
+
+    public async Task<bool> GetPlayerRegister()
+    {
+        string method = "registeredPlayers";
+        try
+        {
+            var response = await contract.Call(method, new object[]
+            {
+                PlayerPrefs.GetString("Account")
+            });
+
+            return response[0].ToString() == "True";
+        }
+        catch (Exception e)
+        {
+            print(e);
+        }
+
+        return false;
+    }
+
+    public async Task<int> GetTotalRecord()
+    {
+        string method = "totalRecords";
+        try
+        {
+            var response = await contract.Call(method, new object[]
+            {
+                
+            });
+
+            return int.Parse(response[0].ToString());
+        }
+        catch (Exception e)
+        {
+            print(e);
+        }
+
+        return 0;
+    }
+
+    public async Task<object[]> GetRecord(int id)
+    {
+        string method = "Records";
+        try
+        {
+            var response = await contract.Call(method, new object[]
+            {
+                id
+            });
+
+            return response;
+        }
+        catch (Exception e)
+        {
+            print(e);
+        }
+
+        return null;
+    }
+    
+    public async Task GetAcess(int id)
+    {
+        string method = "AcessInfo";
+        try
+        {
+            var data = contract.Calldata(method, new object[]
+            {
+                id
+            });
+
+            string response = await Web3Wallet.SendTransaction(chainId, contractAddress, "0", data, "", "");
+        }
+        catch (Exception e)
+        {
+            print(e);
+        }
+    }
+
+    public Contract GetContract()
+    {
+        return contract;
     }
 }

@@ -19,7 +19,9 @@ public class EndGameController : MonoBehaviour
         BCInteract.Instance.RegisterPlayerSkills(
             DataManager.Instance.getPlayerName(), 
             (int) DataManager.Instance.getGameScore(), 
-            DataManager.Instance.getGameSkills());
+            DataManager.Instance.getGameSkills(),
+            GameController.Instance.FormatTime(GameController.Instance.ReturnTimer()), 
+            Int32.Parse(killsText.text));
     }
     
 }

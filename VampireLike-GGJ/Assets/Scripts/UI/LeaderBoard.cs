@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using BlockChain;
+using TMPro;
 using UnityEngine;
 
 public class LeaderBoard : MonoBehaviour
@@ -9,30 +10,35 @@ public class LeaderBoard : MonoBehaviour
     [SerializeField] private Transform leaderboardPositionTransform;
     [SerializeField] private GameObject scorePrefab;
     [SerializeField] private GameObject Feedback;
-
-    private void Start()
+    private TextMeshProUGUI FeedbackText;
+    
+    private void Awake()
     {
-        var chain = ChainManager.Instance.GetChain();
-
-        if (chain.IsValidChain())
-        {
-            var size = chain.Chain.Count;
-            if (size == 1)
-            {
-                Feedback.SetActive(true);
-            }
-            for (int i = 1; i < size; i++)
-            {
-                var data_split = FormatData(chain.Chain[i].getData());
-                var score = Instantiate(scorePrefab, leaderboardPositionTransform);
-                score.GetComponent<Leaderboard_score>().setScore(data_split[0], data_split[1], data_split[2]);
-            }
-        }
+        FeedbackText = Feedback.GetComponent<TextMeshProUGUI>();
     }
 
-    private string[] FormatData(string data)
+
+    private async void Start()
     {
-        string[] parts = data.Split("|");
-        return parts;
+        Feedback.SetActive(true);
+        FeedbackText.text = "Carregando Histórico...";
+        
+        if (BCInteract.Instance.GetContract() != null)
+        {
+            int size = await BCInteract.Instance.GetTotalRecord();
+            if (size == 0)
+            {
+                FeedbackText.text = "Sem vitórias registradas";
+            }
+            for (int i = 1; i <= size; i++)
+            {
+                Feedback.SetActive(false);
+
+                var recordInfo = await BCInteract.Instance.GetRecord(i);
+                
+                var score = Instantiate(scorePrefab, leaderboardPositionTransform);
+                score.GetComponent<Leaderboard_score>().setScore(recordInfo[2].ToString(), recordInfo[3].ToString(), i);
+            }
+        }
     }
 }

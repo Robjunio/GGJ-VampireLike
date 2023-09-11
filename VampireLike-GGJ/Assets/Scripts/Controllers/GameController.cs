@@ -46,7 +46,7 @@ public class GameController : MonoBehaviour
         Interface.UpdateTimerUIText(FormatTime(currentTime));
     }
 
-    private string FormatTime(float time)
+    public string FormatTime(float time)
     {
         int minutes = Mathf.FloorToInt(time / 60f);
         int seconds = Mathf.FloorToInt(time % 60f);

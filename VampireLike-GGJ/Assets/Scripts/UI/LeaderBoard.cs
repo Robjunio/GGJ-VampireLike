@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using BlockChain;
 using TMPro;
 using UnityEngine;
@@ -26,18 +27,31 @@ public class LeaderBoard : MonoBehaviour
         if (BCInteract.Instance.GetContract() != null)
         {
             int size = await BCInteract.Instance.GetTotalRecord();
+            
             if (size == 0)
             {
                 FeedbackText.text = "Sem vitórias registradas";
             }
-            for (int i = 1; i <= size; i++)
+
+            else
             {
+                List<Record> records = new List<Record>();
+
+                for (int i = 1; i <= size; i++)
+                {
+                    var recordInfo = await BCInteract.Instance.GetRecord(i);
+                    records.Add(recordInfo);
+                }
+
+                records = records.OrderByDescending(recordInfo => recordInfo.points).ToList();
+                
                 Feedback.SetActive(false);
 
-                var recordInfo = await BCInteract.Instance.GetRecord(i);
-                
-                var score = Instantiate(scorePrefab, leaderboardPositionTransform);
-                score.GetComponent<Leaderboard_score>().setScore(recordInfo.ownerName, recordInfo.points.ToString(), i);
+                foreach (var recordInfo in records)
+                {
+                    var score = Instantiate(scorePrefab, leaderboardPositionTransform);
+                    score.GetComponent<Leaderboard_score>().setScore(recordInfo.ownerName, recordInfo.points.ToString(), recordInfo.id);
+                }
             }
         }
     }

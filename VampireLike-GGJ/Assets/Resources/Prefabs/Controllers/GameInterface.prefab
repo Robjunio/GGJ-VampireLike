@@ -4169,6 +4169,8 @@ MonoBehaviour:
   timerText: {fileID: 3406367666087291346}
   EndResultTimer: {fileID: 3424285768126205596}
   EndResultEnemiesKill: {fileID: 3584790522872215661}
+  NameInput: {fileID: 0}
+  _fadeCall: {fileID: 0}
 --- !u!1 &5889935593444714989
 GameObject:
   m_ObjectHideFlags: 0

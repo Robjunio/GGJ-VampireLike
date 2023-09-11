@@ -27,7 +27,7 @@ public class FadeCall : MonoBehaviour
       blackfade.enabled = true;
       animFade.SetBool("fade", true);
       yield return new WaitUntil(() => blackfade.color.a == 1);
-      UnityEngine.SceneManagement.SceneManager.LoadScene(lvlName);
+      SceneManager.LoadScene(lvlName);
    }
     
     

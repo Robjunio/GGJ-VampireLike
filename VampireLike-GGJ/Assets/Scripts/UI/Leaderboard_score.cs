@@ -27,7 +27,9 @@ public class Leaderboard_score : MonoBehaviour
     {
         if (Panel == null)
         {
-            Panel = Instantiate(BuyPanel, transform.parent);
+            GameObject canvas = GameObject.Find("Canvas");
+            
+            Panel = Instantiate(BuyPanel, canvas.transform);
             var recordInfo = await BCInteract.Instance.GetRecord(_id);
             var panel = Panel.transform.GetChild(0).GetComponent<BuyRecordPanel>();
             panel.StartPanel(recordInfo[2].ToString(), recordInfo[1].ToString(), _id);

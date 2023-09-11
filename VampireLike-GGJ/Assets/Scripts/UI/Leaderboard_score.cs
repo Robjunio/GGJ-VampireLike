@@ -10,8 +10,11 @@ public class Leaderboard_score : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nameUI;
     [SerializeField] private TextMeshProUGUI pointsUI;
     [SerializeField] private GameObject BuyPanel;
-    private GameObject buyPanelÓbject;
+    [SerializeField] private GameObject RecordInfoPanel;
     [SerializeField] private Button _button;
+    
+    private GameObject buyPanelÓbject;
+    private GameObject recordInfoPanelÓbject;
     private int _id;
 
     public void setScore(string name, string points, int id)
@@ -29,7 +32,7 @@ public class Leaderboard_score : MonoBehaviour
         List<string> addressPermited = await BCInteract.Instance.GetAddressPermited(_id);
         string userAddress = PlayerPrefs.GetString("Account");
 
-        if (userAddress != recordInfo.owner && !addressPermited.Contains(userAddress))
+        if (!addressPermited.Contains(userAddress))
         {
             if (!buyPanelÓbject)
             {
@@ -46,7 +49,17 @@ public class Leaderboard_score : MonoBehaviour
 
         else
         {
-            Debug.Log("Tenho acesso");
+            if (!recordInfoPanelÓbject)
+            {
+                GameObject canvas = GameObject.Find("Canvas");
+                recordInfoPanelÓbject = Instantiate(RecordInfoPanel, canvas.transform);
+                var recordInfoPanel = recordInfoPanelÓbject.transform.GetChild(0).GetComponent<RecordInfoPanel>();
+                recordInfoPanel.StartPanel(recordInfo);
+            }
+            else
+            {
+                recordInfoPanelÓbject.SetActive(true);
+            }
         }
     }
 

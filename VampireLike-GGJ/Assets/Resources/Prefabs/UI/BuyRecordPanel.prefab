@@ -539,7 +539,7 @@ GameObject:
   - component: {fileID: 2409197354861827076}
   - component: {fileID: 7269917771998589889}
   m_Layer: 5
-  m_Name: BG
+  m_Name: BuyRecordPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

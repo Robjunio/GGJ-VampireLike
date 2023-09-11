@@ -94,11 +94,11 @@ public class SkillsController : MonoBehaviour
     public string ReturnSkillsLevel()
     {
         return 
-            "Whip: " + whipLvl.text + 
-            "\nStardust: " + gunLvl.text + 
-            "\nFire-Fable: " + rotativeOrbeLvl.text + 
-            "\nLightning: " + lightningLvl.text + 
-            "\nBarrier: " + shieldLvl.text;
+            "- Whip: " + whipLvl.text + 
+            "\n- Stardust: " + gunLvl.text + 
+            "\n- Fire-Fable: " + rotativeOrbeLvl.text + 
+            "\n- Lightning: " + lightningLvl.text + 
+            "\n- Barrier: " + shieldLvl.text;
     }
     
 }

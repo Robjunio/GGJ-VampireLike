@@ -55,6 +55,7 @@ MonoBehaviour:
   nameUI: {fileID: 6669789684889964145}
   pointsUI: {fileID: 7656341676353064585}
   BuyPanel: {fileID: 3418193447527306614, guid: 47dc63585d0150a43b9258ae155d8fe9, type: 3}
+  RecordInfoPanel: {fileID: 3418193447527306614, guid: f76aac8f3c7be1445a2ff71036a3d005, type: 3}
   _button: {fileID: 1154807730849728681}
 --- !u!1 &1721425586652146660
 GameObject:

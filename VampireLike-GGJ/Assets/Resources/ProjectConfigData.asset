@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectID: 9ec9c2d6-fbc0-4b6f-b673-a5e3b868e676
   chainID: 5
-  chain: Goerli
-  network: Please Enter Your Network i.e Mainnet, Testnet
-  rpc: Please Enter Your RPC
+  chain: goerli
+  network: Ethereum
+  rpc: https://rpc.ankr.com/eth_goerli

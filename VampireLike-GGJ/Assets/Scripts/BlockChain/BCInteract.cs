@@ -62,7 +62,7 @@ public class BCInteract : MonoBehaviour
         }
     }
 
-    public static async void RegisterPlayerSkills(string playerName, int points, string playerSkills, string timeSpent = "60", int enemiesKilled = 10)
+    public async void RegisterPlayerSkills(string playerName, int points, string playerSkills, string timeSpent = "60", int enemiesKilled = 10)
     {
         string method = "registerRecord";
 
@@ -78,6 +78,8 @@ public class BCInteract : MonoBehaviour
                 new List<String>()
             });
             
+            Debug.Log("Data: " + data);
+
             string response = await Web3Wallet.SendTransaction(chainId, contractAddress, "0", data, "", "");
 
             Debug.Log("Resposta do RegisterPlayerSkills:\n\n" + response);

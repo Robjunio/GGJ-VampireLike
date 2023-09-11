@@ -16,7 +16,7 @@ public class EndGameController : MonoBehaviour
         DataManager.Instance.InsertPlayerName(playerText.text);
         DataManager.Instance.InsertGameScore(GameController.Instance.ReturnTimer(), Int32.Parse(killsText.text));
         
-        BCInteract.RegisterPlayerSkills(
+        BCInteract.Instance.RegisterPlayerSkills(
             DataManager.Instance.getPlayerName(), 
             (int) DataManager.Instance.getGameScore(), 
             DataManager.Instance.getGameSkills());

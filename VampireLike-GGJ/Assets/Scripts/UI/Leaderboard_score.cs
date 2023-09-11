@@ -32,7 +32,7 @@ public class Leaderboard_score : MonoBehaviour
         List<string> addressPermited = await BCInteract.Instance.GetAddressPermited(_id);
         string userAddress = PlayerPrefs.GetString("Account");
 
-        if (!addressPermited.Contains(userAddress))
+        if (userAddress != recordInfo.owner && !addressPermited.Contains(userAddress))
         {
             if (!buyPanelÓbject)
             {

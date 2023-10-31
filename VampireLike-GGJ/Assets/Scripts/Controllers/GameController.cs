@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour
         _xpController.Start();
         
         var time = DateTime.Now.ToShortTimeString();
-        print(time);
+        // print(time);
     }
     
     private void Update()
@@ -46,7 +46,7 @@ public class GameController : MonoBehaviour
         Interface.UpdateTimerUIText(FormatTime(currentTime));
     }
 
-    private string FormatTime(float time)
+    public string FormatTime(float time)
     {
         int minutes = Mathf.FloorToInt(time / 60f);
         int seconds = Mathf.FloorToInt(time % 60f);
@@ -84,5 +84,10 @@ public class GameController : MonoBehaviour
     public int getEnemiesKilled()
     {
         return EnemyKills;
+    }
+
+    public float ReturnTimer()
+    {
+        return currentTime;
     }
 }

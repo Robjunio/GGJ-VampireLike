@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using BlockChain;
+using TMPro;
 using UnityEngine;
 
 public class LeaderBoard : MonoBehaviour
@@ -9,30 +11,48 @@ public class LeaderBoard : MonoBehaviour
     [SerializeField] private Transform leaderboardPositionTransform;
     [SerializeField] private GameObject scorePrefab;
     [SerializeField] private GameObject Feedback;
-
-    private void Start()
+    private TextMeshProUGUI FeedbackText;
+    
+    private void Awake()
     {
-        var chain = ChainManager.Instance.getChain();
-
-        if (chain.IsValidChain())
-        {
-            var size = chain.Chain.Count;
-            if (size == 1)
-            {
-                Feedback.SetActive(true);
-            }
-            for (int i = 1; i < size; i++)
-            {
-                var data_split = FormatData(chain.Chain[i].getData());
-                var score = Instantiate(scorePrefab, leaderboardPositionTransform);
-                score.GetComponent<Leaderboard_score>().setScore(data_split[0], data_split[1], data_split[2]);
-            }
-        }
+        FeedbackText = Feedback.GetComponent<TextMeshProUGUI>();
     }
 
-    private string[] FormatData(string data)
+
+    private async void Start()
     {
-        string[] parts = data.Split("|");
-        return parts;
+        Feedback.SetActive(true);
+        FeedbackText.text = "Carregando Histórico...";
+        
+        if (BCInteract.Instance.GetContract() != null)
+        {
+            int size = await BCInteract.Instance.GetTotalRecord();
+            
+            if (size == 0)
+            {
+                FeedbackText.text = "Sem vitórias registradas";
+            }
+
+            else
+            {
+                List<Record> records = new List<Record>();
+
+                for (int i = 1; i <= size; i++)
+                {
+                    var recordInfo = await BCInteract.Instance.GetRecord(i);
+                    records.Add(recordInfo);
+                }
+
+                records = records.OrderByDescending(recordInfo => recordInfo.points).ToList();
+                
+                Feedback.SetActive(false);
+
+                foreach (var recordInfo in records)
+                {
+                    var score = Instantiate(scorePrefab, leaderboardPositionTransform);
+                    score.GetComponent<Leaderboard_score>().setScore(recordInfo.ownerName, recordInfo.points.ToString(), recordInfo.id);
+                }
+            }
+        }
     }
 }

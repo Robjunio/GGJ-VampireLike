@@ -9,7 +9,7 @@ public class CheckEnemyPos : MonoBehaviour
     {
         if (col.CompareTag("Ground"))
         {
-            print("A");
+            // print("A");
         }
     }
 }

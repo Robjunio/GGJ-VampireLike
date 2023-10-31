@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Enemies;
 using Player;
@@ -28,7 +29,7 @@ public class WhipController : MonoBehaviour
     private void Start()
     {
         _level = 1;
-        damage = 40;
+        damage = Int32.MaxValue;
         _attackInterval = 2f;
 
         playerAtkAnim = playerAtkAnim.GetComponent<Animator>();
